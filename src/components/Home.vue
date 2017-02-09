@@ -1,6 +1,8 @@
 <template>
-  <div class="hello">
+  <div class="home">
     <h1>{{ msg }}</h1>
+    
+
     <!-- <h2>Essential Links</h2>
     <ul>
       <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
@@ -22,7 +24,7 @@
 
 <script>
 export default {
-  name: 'hello',
+  name: 'home',
   data () {
     return {
       msg: "Welcome to Finapp. It's going to be awesome"
@@ -35,6 +37,10 @@ export default {
 <style scoped>
 h1, h2 {
   font-weight: normal;
+}
+
+section {
+
 }
 
 ul {
