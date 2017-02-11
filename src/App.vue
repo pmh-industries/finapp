@@ -1,12 +1,20 @@
 <template>
-  <div id="app" class="container">
-    <img src="./assets/logo.png">
-    <router-link to="/" class="btn-lg">Home</router-link>
-    <router-link to="/about" class="btn-lg">About</router-link>
-    <router-link to="/registration" class="btn-lg">Registration</router-link>
-    <router-link to="/investments" class="btn-lg">Investments</router-link>
-    <router-link to="/contact" class="btn-lg">Contact</router-link>
-    <router-view></router-view>
+  <div id="wrapper">
+    <div id="app" class="container">
+      <div class="navbar">
+        <img id="logo" src="./assets/logo.png">
+        <div class="links">
+          <router-link to="/" class="btn-lg">Home</router-link>
+          <router-link to="/about" class="btn-lg">About</router-link>
+          <router-link to="/registration" class="btn-lg">Registration</router-link>
+          <router-link to="/investments" class="btn-lg">Investments</router-link>
+          <router-link to="/contact" class="btn-lg">Contact</router-link>
+        </div>
+      </div>
+      <div class="content">
+        <router-view></router-view>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -22,15 +30,35 @@ export default {
 </script>
 
 <style>
+#wrapper {
+  background-color: #F1F1F1;
+}
 #app {
-  background-color: orangered;
+  background-color: white;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 10px;
+  margin-top: 0px;
+  box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.1);
 }
 
+.navbar {
+  background-color: orangered;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#logo {
+  float: left;
+  margin-left: 50px;
+  max-height: 80px;
+}
+
+.links {
+  float: right;
+}
 
 </style>
