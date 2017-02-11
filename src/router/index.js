@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import {load, Map, Marker} from 'vue-google-maps'
+
 import Home from 'components/Home'
 import About from 'components/layout/About'
 import Registration from 'components/layout/Registration'
