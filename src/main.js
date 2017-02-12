@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import {load, Map, Marker} from 'vue-google-maps'
 
 /* eslint-disable no-new */
 new Vue({
