@@ -1,17 +1,17 @@
 <template>
   <div id="wrapper">
-    <div id="app" class="container">
-      <div class="navbar">
-        <img id="logo" src="./assets/logo.png">
-        <div class="links">
-          <router-link to="/" class="btn-lg">Home</router-link>
-          <router-link to="/about" class="btn-lg">About</router-link>
-          <router-link to="/registration" class="btn-lg">Registration</router-link>
-          <router-link to="/investments" class="btn-lg">Investments</router-link>
-          <router-link to="/contact" class="btn-lg">Contact</router-link>
-        </div>
+    <div class="navbar container navbar-default navbar-fixed-top">
+      <img id="logo" src="./assets/logo.png">
+      <div class="links">
+        <router-link to="/" class="btn-lg">Home</router-link>
+        <router-link to="/about" class="btn-lg">About</router-link>
+        <router-link to="/registration" class="btn-lg">Registration</router-link>
+        <router-link to="/investments" class="btn-lg">Investments</router-link>
+        <router-link to="/contact" class="btn-lg">Contact</router-link>
       </div>
-      <div class="jumbotron">
+    </div>
+    <div id="app" class="container">
+      <div class="jumbotron lead-item">
         <h1>REGISTER</h1>
         <p><a class="btn btn-primary btn-lg" href="#" role="button">CLICK HERE</a></p>
       </div>
@@ -66,6 +66,12 @@ export default {
   align-items: center;
 }
 
+.navbar-default {
+  background-color: orangered;
+  background-image: none;
+  background-repeat: no-repeat;
+}
+
 #logo {
   float: left;
   margin-left: 50px;
@@ -79,6 +85,10 @@ export default {
 h1, h2 {
   font-weight: normal;
   padding: 30px;
+}
+
+.lead-item {
+  margin-top: 100px;
 }
 
 .content {
