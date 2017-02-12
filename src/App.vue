@@ -1,16 +1,16 @@
 <template>
   <div id="wrapper">
-    <div id="app" class="container">
-      <div class="navbar">
-        <img id="logo" src="./assets/logo.png">
-        <div class="links">
-          <router-link to="/" class="btn-lg">Home</router-link>
-          <router-link to="/about" class="btn-lg">About</router-link>
-          <router-link to="/registration" class="btn-lg">Registration</router-link>
-          <router-link to="/investments" class="btn-lg">Investments</router-link>
-          <router-link to="/contact" class="btn-lg">Contact</router-link>
-        </div>
+    <div class="navbar container">
+      <img id="logo" src="./assets/logo.png">
+      <div class="links">
+        <router-link to="/" class="btn-lg">Home</router-link>
+        <router-link to="/about" class="btn-lg">About</router-link>
+        <router-link to="/registration" class="btn-lg">Registration</router-link>
+        <router-link to="/investments" class="btn-lg">Investments</router-link>
+        <router-link to="/contact" class="btn-lg">Contact</router-link>
       </div>
+    </div>
+    <div id="app" class="container">
       <div class="jumbotron">
         <h1>REGISTER</h1>
         <p><a class="btn btn-primary btn-lg" href="#" role="button">CLICK HERE</a></p>
