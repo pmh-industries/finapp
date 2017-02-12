@@ -11,25 +11,40 @@
           <router-link to="/contact" class="btn-lg">Contact</router-link>
         </div>
       </div>
+      <div class="jumbotron">
+        <h1>REGISTER</h1>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">CLICK HERE</a></p>
+      </div>
+
+
       <div class="content">
         <router-view></router-view>
+      </div>
+      <div class="footer">
+        <div class="arrow-down"></div>
+      </div>
+      <div class="footer">
+        <div class="col-sm-6 col-xs-12"></div>
+          <div class="col-sm-6 col-xs-12">
+            <div class="call-to-action">
+            <h2>REGISTER</h2>
+            <p><a class="btn btn-primary btn-lg" href="/registration" role="button">CLICK HERE</a></p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-// import Home from './components/Home'
-// import About from './components/layout/About'
-// import Registration from './components/layout/Registration'
-// import Investments from './components/layout/Investments'
-// import Contact from './components/layout/Contact'
+
 export default {
   name: 'app'
 }
 </script>
 
-<style>
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
 #wrapper {
   background-color: #F1F1F1;
 }
@@ -61,4 +76,59 @@ export default {
   float: right;
 }
 
+h1, h2 {
+  font-weight: normal;
+  padding: 30px;
+}
+
+.content {
+  background-color: white;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+a {
+  color: black;
+}
+
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+.footer {
+  background-color: orangered;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid white;
+}
+
+.call-to-action {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 </style>

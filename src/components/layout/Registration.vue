@@ -1,35 +1,9 @@
 <template lang="html">
-  <div>
-    <h1>This is Registration</h1>
-    <div class="row">
-        <div class="col-md-12 text-center">
-          <h1>Hello {{fullname}}</h1>
-          <ul class="text-left">
-            <li>First Name: {{first}}</li>
-            <li>Last Name: {{last}}</li>
-          </ul>
-            <hr />
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <label>Full Name:</label>
-          <input type="text" class="form-control" v-model="fullname" />
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="form-group">
-            <label>First Name:</label>
-            <input type="text" class="form-control" v-model="first"/>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="form-group">
-            <label>Last Name:</label>
-            <input type="text" class="form-control" v-model="last" />
-          </div>
-        </div>
+  <div class="registration">
+    <div class="jumbotron content">
+      <h2>INFORMATION ABOUT REGISTRATION</h2>
+      <p>Pancetta tail spare ribs sirloin, bresaola shank ribeye tenderloin ham hock sausage chuck doner beef ribs alcatra meatloaf. Cow pork loin strip steak venison tri-tip beef t-bone. Biltong shankle pig tenderloin, kielbasa spare ribs hamburger meatloaf rump ham tri-tip. Jowl meatball fatback sirloin picanha ham, shoulder tenderloin swine sausage pork bresaola jerky cupim. Pork tail jerky beef ribs short ribs. Beef ribs alcatra meatball, ribeye rump turducken andouille. Pork doner sausage, shank tri-tip prosciutto pork loin turkey pork chop pancetta tenderloin flank ribeye.</p>
+    </div>
   </div>
 </template>
 
@@ -38,5 +12,60 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style scoped>
+h1, h2 {
+  font-weight: normal;
+  padding: 30px;
+}
+
+.content {
+  background-color: white;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+a {
+  color: #42b983;
+}
+
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+.footer {
+  background-color: orangered;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid white;
+}
+
+.call-to-action {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 </style>
