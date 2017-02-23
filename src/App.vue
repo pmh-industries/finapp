@@ -8,6 +8,7 @@
         <router-link to="/registration" class="btn-lg">Registration</router-link>
         <router-link to="/investments" class="btn-lg">Investments</router-link>
         <router-link to="/contact" class="btn-lg">Contact</router-link>
+        <router-link to="/dashboard" class="btn-lg">Dashboard</router-link>
       </div>
     </div>
     <div id="app" class="container">

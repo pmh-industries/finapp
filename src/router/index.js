@@ -7,6 +7,7 @@ import About from 'components/layout/About'
 import Registration from 'components/layout/Registration'
 import Investments from 'components/layout/Investments'
 import Contact from 'components/layout/Contact'
+import Dashboard from 'components/dashboard/Dashboard'
 
 Vue.use(Router)
 
@@ -36,6 +37,11 @@ export default new Router({
       path: '/contact',
       name: 'Contact',
       component: Contact
+    },
+    {
+      path: '/dashboard',
+      name: 'Dashboard',
+      component: Dashboard
     },
   ],
   mode: 'history'
