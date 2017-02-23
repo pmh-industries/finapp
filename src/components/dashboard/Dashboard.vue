@@ -1,9 +1,10 @@
 <template lang="html">
-  <div class="dash">
-  <iframe id="render">
-    <h1>Hello fro dashboard</h1>
-  </iframe>
-  </div>
+<div id="r">
+
+    <h6>Hello fro dashboard</h6>
+
+</div>
+
 </template>
 
 <script>
@@ -12,5 +13,10 @@
 </script>
 
 <style lang="css">
+  #r {
+    background: mediumseagreen;
+    width:500px;
+
+  }
 </style>
 
