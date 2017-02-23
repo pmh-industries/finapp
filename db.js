@@ -29,7 +29,7 @@ const clients = {
   client4: {
     name:'Eugene',
     image: 'http://lorempixel.com/200/100/sports/4/',
-    account: 0123456,
+    account: 123456,
     investment: 996,
     profit: 669,
     status: 'active',
@@ -37,4 +37,4 @@ const clients = {
   },
   }
 
-export default burgers;
+export default clients;
