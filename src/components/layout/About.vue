@@ -1,4 +1,3 @@
-
 <template lang="html">
   <div>
     <h1>This is About</h1>
@@ -6,8 +5,7 @@
 </template>
 
 <script>
-export default {
-}
+  export default {}
 </script>
 
 <style lang="css">
