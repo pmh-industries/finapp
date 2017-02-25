@@ -1,145 +1,211 @@
 <template>
-  <div id="wrapper">
-    <div class="navbar container navbar-default navbar-fixed-top">
-      <img id="logo" src="./assets/logo.png">
-      <div class="links">
-        <router-link to="/" class="btn-lg">Home</router-link>
-        <router-link to="/about" class="btn-lg">About</router-link>
-        <router-link to="/registration" class="btn-lg">Registration</router-link>
-        <router-link to="/investments" class="btn-lg">Investments</router-link>
-        <router-link to="/contact" class="btn-lg">Contact</router-link>
-        <router-link to="/dashboard" class="btn-lg">Dashboard</router-link>
+  <div id="app">
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li>
+              <router-link to="/">Home</router-link>
+            </li>
+            <li>
+              <router-link to="/about">About</router-link>
+            </li>
+            <li>
+              <router-link to="/registration">Registration</router-link>
+            </li>
+            <li>
+              <router-link to="/investments">Investments</router-link>
+            </li>
+            <li>
+              <router-link to="/contact">Contact</router-link>
+            </li>
+            <li>
+              <router-link to="/dashboard" class="btn btn-success">Personal account</router-link>
+              </a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
       </div>
-    </div>
-    <div id="app" class="container">
-      <div class="jumbotron lead-item">
-        <h1>REGISTER</h1>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">CLICK HERE</a></p>
-      </div>
-
+    </nav>
+    <div class="container">
 
       <div class="content">
         <router-view></router-view>
       </div>
-      <div class="footer">
-        <div class="arrow-down"></div>
-      </div>
-      <div class="footer">
-        <div class="col-sm-6 col-xs-12"></div>
-          <div class="col-sm-6 col-xs-12">
-            <div class="call-to-action">
-            <h2>REGISTER</h2>
-            <p><a class="btn btn-primary btn-lg" href="/registration" role="button">CLICK HERE</a></p>
-          </div>
-        </div>
-      </div>
     </div>
+    //footer
   </div>
+
 </template>
 
 <script>
 
-export default {
-  name: 'app'
-}
+  export default {
+    name: 'app'
+  }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-#wrapper {
-  background-color: #F1F1F1;
-}
-#app {
-  background-color: white;
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 0px;
-  box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.1);
-}
+  #wrapper {
+    background-color: #F1F1F1;
+  }
 
-.navbar {
-  background-color: orangered;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
+  #app {
+    /*background-color: white;*/
+    /*font-family: 'Avenir', Helvetica, Arial, sans-serif;*/
+    /*-webkit-font-smoothing: antialiased;*/
+    /*-moz-osx-font-smoothing: grayscale;*/
+    /*text-align: center;*/
+    /*color: #2c3e50;*/
+    /*margin-top: 0px;*/
+    /*box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.1);*/
+  }
 
-.navbar-default {
-  background-color: orangered;
-  background-image: none;
-  background-repeat: no-repeat;
-}
+  footer {
+    background: #243c4f;
+    padding: 60px 0;
+  }
 
-#logo {
-  float: left;
-  margin-left: 50px;
-  max-height: 80px;
-}
+  footer p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+  }
 
-.links {
-  float: right;
-}
+  footer a {
+    color: #3ac341;
+  }
 
-h1, h2 {
-  font-weight: normal;
-  padding: 30px;
-}
+  footer a:hover {
+    color: #3ac341;
+  }
 
-.lead-item {
-  margin-top: 100px;
-}
+  footer .footer-title {
+    position: relative;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: white;
+  }
 
-.content {
-  background-color: white;
-}
+  footer .footer-title:after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 1px;
+    background: #3ac341;
+    margin-top: 8px;
+  }
 
-.row {
-  display: flex;
-  justify-content: center;
-}
+  footer .right-border {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+  }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
+  footer .left-border {
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+  }
 
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
+  @media (max-width: 991px) {
+    footer .copyright {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: 40px;
+      text-align: center;
+    }
 
-a {
-  color: black;
-}
+    footer .right-border {
+      border-right: none;
+    }
+  }
 
-#map {
-  height: 400px;
-  width: 100%;
-}
+  @media (max-width: 767px) {
+    footer .right-border {
+      border-right: none;
+    }
 
-.footer {
-  background-color: orangered;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 30px;
-}
+    footer .left-border {
+      border-left: none;
+    }
 
-.arrow-down {
-  width: 0;
-  height: 0;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-top: 20px solid white;
-}
+    footer .navigation {
+      margin-top: 40px;
+      border-top: 1px solid white;
+    }
+  }
 
-.call-to-action {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
+  footer .footer-about {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 40px;
+  }
+
+  footer .contact-info .single {
+    margin: 15px 0;
+  }
+
+  footer .contact-info .single i {
+    display: block;
+    float: left;
+    color: #3ac341;
+    margin-right: 10px;
+    line-height: 22px;
+  }
+
+  footer .contact-info .single p {
+    margin: 0;
+    padding: 0;
+    display: block;
+    overflow: hidden;
+  }
+
+  footer .social-icon {
+    margin-top: 40px;
+  }
+
+  footer .social-icon li a {
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin-right: 5px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  footer .social-icon li a:hover {
+    border-color: #3ac341;
+    color: #3ac341;
+  }
+
+  footer .social-icon li a i {
+    line-height: 32px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  footer .navigation li a {
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    line-height: 30px;
+    text-decoration: none;
+  }
+
+  footer .navigation li a:hover {
+    color: #3ac341;
+  }
+
+  footer .copyright {
+    padding-top: 40px;
+  }
 </style>
