@@ -34,7 +34,7 @@
     <favorites_list name="finapp" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.8835691">
+    <splitter split-orientation="horizontal" split-proportion="0.52934784">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="Home.vue" pinned="false" current-in-tab="false">
@@ -63,7 +63,7 @@
           <file leaf-file-name="Dashboard.vue" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/components/dashboard/Dashboard.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="222">
+                <state relative-caret-position="612">
                   <caret line="496" column="55" selection-start-line="496" selection-start-column="30" selection-end-line="496" selection-end-column="55" />
                   <folding>
                     <element signature="e#27485#29141#0" expanded="true" />
@@ -231,8 +231,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="985" />
-    <option name="width" value="381" />
+    <option name="x" value="404" />
+    <option name="width" value="962" />
     <option name="height" value="768" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -509,18 +509,18 @@
       <workItem from="1487825720124" duration="213000" />
       <workItem from="1487825954595" duration="18287000" />
       <workItem from="1487857095541" duration="22759000" />
-      <workItem from="1487978150218" duration="30082000" />
+      <workItem from="1487978150218" duration="30298000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71341000" />
+    <option name="totallyTimeSpent" value="71557000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="985" y="0" width="381" height="768" extended-state="6" />
+    <frame x="404" y="0" width="962" height="768" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.59205776" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -529,7 +529,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4478261" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="CSS-X-Fire" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.51104975" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4461326" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -602,6 +602,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#6;n#div#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#8;n#div#0;n#template#0;n#!!top" expanded="false" />
             <element signature="e#27485#29141#0" expanded="true" />
             <element signature="e#27513#29131#0" expanded="true" />
             <element signature="e#27532#27582#0" expanded="true" />
@@ -684,6 +686,8 @@
         <state relative-caret-position="1005">
           <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
           <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#6;n#div#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#8;n#div#0;n#template#0;n#!!top" expanded="false" />
             <element signature="e#27485#29141#0" expanded="true" />
             <element signature="e#27513#29131#0" expanded="true" />
             <element signature="e#27532#27582#0" expanded="true" />
@@ -864,21 +868,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="56" column="41" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
-          <folding>
-            <element signature="e#5192#5213#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/dashboard/Dashboard.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="496" column="55" selection-start-line="496" selection-start-column="30" selection-end-line="496" selection-end-column="55" />
+        <state relative-caret-position="-321">
+          <caret line="505" column="62" selection-start-line="505" selection-start-column="62" selection-end-line="505" selection-end-column="62" />
           <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#6;n#div#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#8;n#div#0;n#template#0;n#!!top" expanded="false" />
             <element signature="e#27485#29141#0" expanded="true" />
             <element signature="e#27513#29131#0" expanded="true" />
             <element signature="e#27532#27582#0" expanded="true" />
@@ -890,6 +886,16 @@
             <element signature="e#28586#28748#0" expanded="true" />
             <element signature="e#28771#28933#0" expanded="true" />
             <element signature="e#28951#29113#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="56" column="41" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
+          <folding>
+            <element signature="e#5192#5213#0" expanded="true" />
           </folding>
         </state>
       </provider>
