@@ -9,6 +9,7 @@ import Investments from 'components/layout/Investments'
 import Contact from 'components/layout/Contact'
 import Dashboard from 'components/dashboard/Dashboard'
 
+
 Vue.use(Router)
 
 export default new Router({
