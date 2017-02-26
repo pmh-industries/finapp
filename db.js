@@ -9,7 +9,7 @@ const clients = {
     price:7.50
   },
   client2: {
-    name:'Meat',
+    name:'Meat', <br />
     image: 'http://lorempixel.com/200/100/sports/2/',
     account: 2345678,
     investment: 998,
