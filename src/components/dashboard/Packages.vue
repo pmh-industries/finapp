@@ -29,7 +29,7 @@
               </li>
               <li>
                 <router-link to="/">Managers</router-link>
-                </li>
+              </li>
             </ul>
           </div>
         </div>
@@ -223,104 +223,105 @@
 
 
 
-  <div class="row">
+    <div class="row">
 
-    <div class="col-md-6 package-active">
-      <div class="animate-panel">
-        <div class="panel-body standard">
-          <div class="stat-panel">
-            <div class="stat-row">
-          <div class="col-md-3 space">
-            <div class="dropdown">
-              <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">EUR
-                <span class="caret"></span></button>
-              <ul class="dropdown-menu">
-                <li><a href="#">EUR</a></li>
-                <li><a href="#">USD</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-2 space ">
-            <div class="dropdown">
-              <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">90
-                <span class="caret"></span></button>
-              <ul class="dropdown-menu">
-                <li><a href="#">90</a></li>
-                <li><a href="#">180</a></li>
-                <li><a href="#">360</a></li>
-                <li><a href="#">480</a></li>
-                <li><a href="#">1500</a></li>
-                <li><a href="#">1980</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-3 space">
-              <button class="btn btn-success">BUY</button>
-          </div>
-          </div>
-            <div class="stat-row">
+      <div class="col-md-6 package-active">
+        <div class="animate-panel">
+          <div class="panel-body standard">
+            <div class="stat-panel">
+              <div class="stat-row">
+                <div class="col-md-3 space">
+                  <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">EUR
+                      <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">EUR</a></li>
+                      <li><a href="#">USD</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-2 space ">
+                  <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">90
+                      <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">90</a></li>
+                      <li><a href="#">180</a></li>
+                      <li><a href="#">360</a></li>
+                      <li><a href="#">480</a></li>
+                      <li><a href="#">1500</a></li>
+                      <li><a href="#">1980</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-3 space">
+                  <button class="btn btn-success">BUY</button>
+                </div>
+              </div>
 
-  <div class="stat-counters bg-default bg-def no-border-b no-padding text-center">
+              <div class="stat-row">
 
-    <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
+                <div class="stat-counters bg-default bg-def no-border-b no-padding text-center">
+
+                  <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
       <span class="text-bg">
       <h4 class="statheader">{{accountEur.standard.days[1]}}</h4>
       </span><br/>
       <span class="text-xs">
         Period days
       </span>
-    </div>
+                  </div>
 
-    <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
+                  <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
       <span class="text-bg">
          <h4 class="statheader">{{accountEur.standard.commission[1]}}</h4>
       </span><br/>
       <span class="text-xs">
         Commission
       </span>
-    </div>
+                  </div>
 
-    <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
+                  <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
       <span class="text-bg">
         <h4 class="statheader">{{'€' + " " + accountEur.standard.profit}}</h4>
       </span><br/>
       <span class="text-xs">
         Profit
       </span>
-    </div>
-  </div>
-               <div class="stat-counters bg-default bg-def no-border-b no-padding text-center">
+                  </div>
+                </div>
+                <div class="stat-counters bg-default bg-def no-border-b no-padding text-center">
 
-    <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
+                  <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
       <span class="text-bg">
       <h4 class="statheader">{{accountEur.standard.days[0]}}</h4>
       </span><br/>
       <span class="text-xs">
         PERCENT PER MONTH
       </span>
-    </div>
+                  </div>
 
-    <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
+                  <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
       <span class="text-bg">
          <h4 class="statheader">{{accountEur.standard.commission[0]}}</h4>
       </span><br/>
       <span class="text-xs">
         PERIOD PERCENT
       </span>
-    </div>
+                  </div>
 
-    <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
+                  <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
 
       <span class="text-xs">
         <button class="btn btn-default">Info</button>
       </span>
-    </div>
-  </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
       <div class="col-md-6 package-active">
         <div class="animate-panel">
@@ -417,11 +418,11 @@
       </span>
                   </div>
                 </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
     </div>
 
     <div class="row">
@@ -943,10 +944,10 @@
     text-align: center;
     margin-top:20px;
   }
-.stat-cell {
-  border-top: 1px solid #6D6D6D !important;
+  .stat-cell {
+    border-top: 1px solid #6D6D6D !important;
 
-}
+  }
 
   h4.statheader {
     color:limegreen;

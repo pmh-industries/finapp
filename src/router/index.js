@@ -8,6 +8,7 @@ import Registration from 'components/layout/Registration'
 import Investments from 'components/layout/Investments'
 import Contact from 'components/layout/Contact'
 import Dashboard from 'components/dashboard/Dashboard'
+import Account from 'components/dashboard/Account'
 
 
 Vue.use(Router)
@@ -43,6 +44,11 @@ export default new Router({
       path: '/dashboard',
       name: 'Dashboard',
       component: Dashboard
+    },
+    {
+    path: '/Account',
+    name: 'Account',
+    component: Account
     },
   ],
   mode: 'history'
