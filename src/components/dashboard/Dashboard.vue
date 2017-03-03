@@ -1,7 +1,6 @@
 <template lang="html">
   <div id="main-wrapper">
     <div id="content-wrapper">
-
       <div class="navbar-inner col-sm-4">
         <div class="navbar-header">
           <div id="main-menu-inner">
@@ -16,29 +15,20 @@
                 <router-link to="/dashboard">Dashboard</router-link>
               </li>
               <li>
-                <router-link to="/">Account</router-link>
+                <router-link to="/account">Account</router-link>
               </li>
               <li>
-                <router-link to="/">Profile</router-link>
+                <router-link to="/packages">Packages</router-link>
               </li>
-              <li>
-                <router-link to="/">Documents</router-link>
-              </li>
-              <li>
-                <router-link to="/">History</router-link>
-              </li>
-              <li>
-                <router-link to="/">Managers</router-link>
-                </li>
             </ul>
           </div>
         </div>
       </div>
 
       <div class="page-header">
-        <h1>Currency rate</h1>
         <div class="row col-sm-8">
-          <div class="col-sm-8">
+          <div class="col-sm-8 centered">
+            <h1 class="centered">Currency rate</h1>
             <p>
               The reference rates of European Central Bank. Usually updated around 16:00 CET
             </p>
@@ -65,156 +55,9 @@
       </div>
     </div>
 
-    <div class="page-header centered">
-      <h3>Account current EUR</h3>
-    </div>
-
-    <div class="page-header">
-      <div class="col-sm-12">
-        <div class="animate-panel">
-          <div class="panel-body">
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-              <div class="stats-title">
-                <h5>{{client.account}}</h5>
-              </div>
-              <div class="m-t-xl">
-                <div class="cell">
-                  <h3>{{"€" + " " + client.amount}}</h3>
-                </div>
-                <div class="cell">
-                  <button type="button" class="btn btn-success btn-sm mrgbtn">
-                    <span class="glyphicon glyphicon-arrow-right"></span>
-                  </button>
-                </div>
-              </div>
-
-            </div>
-
-            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
-              <div class="stats-title">
-                <h5 class="header-panel-right">AMOUNT IN</h5>
-              </div>
-              <div class="m-t-xl">
-                <div class="cell">
-                  <h3>{{"€" + " " + client.amountIn}}</h3>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
-              <div class="stats-title">
-                <h5 class="header-panel-right">AMOUNT OUT</h5>
-              </div>
-              <div class="m-t-xl">
-                <div class="cell">
-                  <h3>{{"€" + " " + client.amountOut}}</h3>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
-              <div class="stats-title">
-                <h5 class="header-panel-right">AMOUNT BLOCKED</h5>
-              </div>
-              <div class="m-t-xl">
-                <div class="cell">
-                  <h3>{{"€" + " " + client.amountBlocked}}</h3>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-              <div class="stats-title">
-                <h5 class="header-panel-right">AMOUNT INVESTED</h5>
-              </div>
-              <div class="m-t-xl">
-                <div class="cell">
-                  <h3>{{"€" + " " + client.amountInvested}}</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="page-header centered">
-      <br/>
-      <h3 >Account current USD</h3>
-    </div>
-
-    <div class="page-header">
-      <div class="col-sm-12">
-        <div class="animate-panel">
-          <div class="panel-body">
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-              <div class="stats-title">
-                <h5>{{"$" + " " + client.account}}</h5>
-              </div>
-              <div class="m-t-xl">
-                <div class="cell">
-                  <h3>{{"$" + " " + accountEur.account.amountIn}}</h3>
-                </div>
-                <div class="cell">
-                  <button type="button" class="btn btn-success btn-sm mrgbtn">
-                    <span class="glyphicon glyphicon-arrow-right"></span>
-                  </button>
-                </div>
-              </div>
-
-            </div>
-
-            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
-              <div class="stats-title">
-                <h5 class="header-panel-right">AMOUNT IN</h5>
-              </div>
-              <div class="m-t-xl">
-                <div class="cell">
-                  <h3>{{"$" + " "+ client.amountOut}}</h3>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
-              <div class="stats-title">
-                <h5 class="header-panel-right">AMOUNT OUT</h5>
-              </div>
-              <div class="m-t-xl">
-                <div class="cell">
-                  <h3>{{"$" + " "+ client.amountOut}}</h3>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
-              <div class="stats-title">
-                <h5 class="header-panel-right">AMOUNT BLOCKED</h5>
-              </div>
-              <div class="m-t-xl">
-                <div class="cell">
-                  <h3>{{"$" + " "+ client.amountBlocked}}</h3>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-              <div class="stats-title">
-                <h5 class="header-panel-right">AMOUNT INVESTED</h5>
-              </div>
-              <div class="m-t-xl">
-                <div class="cell">
-                  <h3>{{"$" + " "+ client.amountInvested}}</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!--imported accounts component-->
+    <accounts/>
+    <br>
 
     <div class="page-header centered">
       <br/>
@@ -822,7 +665,12 @@
 </template>
 
 <script>
+  import Account from './Account'
+
   export default {
+    components: {
+      'accounts': Account,
+    },
     data() {
       return {
         currency:{
@@ -957,6 +805,10 @@
     display: table-row !important;
     float: none;
     width: 100%;
+  }
+
+  .centered {
+    text-align:center;
   }
 
   body {

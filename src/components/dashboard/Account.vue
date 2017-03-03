@@ -1,179 +1,214 @@
 <template>
 
-  <ul id="example-1">
+  <div id="acc">
+    <ul>
     <li v-for="item in items">
-<div class="page-header">
-  <div class="col-sm-12">
-    <div class="animate-panel">
-      <div class="panel-body">
 
-        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-          <div class="stats-title">
-            <h5>{{items.accountEur.num}}</h5>
-          </div>
-          <div class="m-t-xl">
-            <div class="cell">
-              <h3>{{"€" + " " + items.accountEur.amount}}</h3>
-            </div>
-            <div class="cell">
-              <button type="button" class="btn btn-success btn-sm mrgbtn">
-                <span class="glyphicon glyphicon-arrow-right"></span>
-              </button>
-            </div>
-          </div>
-        </div>
+      <div class="accountBox">
+        <br>
+        <h1 class="accountHeader">Account current EUR</h1>
+        <br>
+        <div class="col-sm-12">
+          <div class="animate-panel">
+            <div class="panel-body">
 
-        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
-          <div class="stats-title">
-            <h5 class="header-panel-right">AMOUNT IN</h5>
-          </div>
-          <div class="m-t-xl">
-            <div class="cell">
-              <h3>{{"€" + " " + items.accountEur.amountIn}}</h3>
-            </div>
-          </div>
-        </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="stats-title">
+                  <h5>{{item.accountNum}}</h5>
+                </div>
+                <div class="m-t-xl">
+                  <div class="cell">
+                    <h3>{{"€" + " " + item.amountE}}</h3>
+                  </div>
+                  <div class="cell">
+                    <button type="button" class="btn btn-success btn-sm mrgbtn">
+                      <span class="glyphicon glyphicon-arrow-right"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
 
-        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
-          <div class="stats-title">
-            <h5 class="header-panel-right">AMOUNT OUT</h5>
-          </div>
-          <div class="m-t-xl">
-            <div class="cell">
-              <h3>{{"€" + " " + items.accountEur.amountOut}}</h3>
-            </div>
-          </div>
-        </div>
+              <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+                <div class="stats-title">
+                  <h5 class="header-panel-right">AMOUNT IN</h5>
+                </div>
+                <div class="m-t-xl">
+                  <div class="cell">
+                    <h3>{{"€" + " " + item.amountInE}}</h3>
+                  </div>
+                </div>
+              </div>
 
-
-        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
-          <div class="stats-title">
-            <h5 class="header-panel-right">AMOUNT BLOCKED</h5>
-          </div>
-          <div class="m-t-xl">
-            <div class="cell">
-              <h3>{{"€" + " " + items.accountEur.amountBlock}}</h3>
-            </div>
-          </div>
-        </div>
+              <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+                <div class="stats-title">
+                  <h5 class="header-panel-right">AMOUNT OUT</h5>
+                </div>
+                <div class="m-t-xl">
+                  <div class="cell">
+                    <h3>{{"€" + " " + item.amountOutE}}</h3>
+                  </div>
+                </div>
+              </div>
 
 
-        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-          <div class="stats-title">
-            <h5 class="header-panel-right">AMOUNT INVESTED</h5>
-          </div>
-          <div class="m-t-xl">
-            <div class="cell">
-              <h3>{{"€" + " " + items.accountEur.amountInv}}</h3>
+              <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+                <div class="stats-title">
+                  <h5 class="header-panel-right">AMOUNT BLOCKED</h5>
+                </div>
+                <div class="m-t-xl">
+                  <div class="cell">
+                    <h3>{{"€" + " " + item.amountBlockE}}</h3>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="stats-title">
+                  <h5 class="header-panel-right">AMOUNT INVESTED</h5>
+                </div>
+                <div class="m-t-xl">
+                  <div class="cell">
+                    <h3>{{"€" + " " + item.amountInvE}}</h3>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
-    </li>
-    </ul>
 
+      <div class="accountBox">
+        <br/>
+        <h1 class="accountHeader">Account current $</h1>
+        <br/>
+        <div class="col-sm-12">
+          <div class="animate-panel">
+            <div class="panel-body">
+
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="stats-title">
+                  <h5>{{item.accountNum$}}</h5>
+                </div>
+                <div class="m-t-xl">
+                  <div class="cell">
+                    <h3>{{"$" + " " + item.amount$}}</h3>
+                  </div>
+                  <div class="cell">
+                    <button type="button" class="btn btn-success btn-sm mrgbtn">
+                      <span class="glyphicon glyphicon-arrow-right"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+                <div class="stats-title">
+                  <h5 class="header-panel-right">AMOUNT IN</h5>
+                </div>
+                <div class="m-t-xl">
+                  <div class="cell">
+                    <h3>{{"$" + " " + item.amountIn$}}</h3>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+                <div class="stats-title">
+                  <h5 class="header-panel-right">AMOUNT OUT</h5>
+                </div>
+                <div class="m-t-xl">
+                  <div class="cell">
+                    <h3>{{"$" + " " + item.amountOut$}}</h3>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+                <div class="stats-title">
+                  <h5 class="header-panel-right">AMOUNT BLOCKED</h5>
+                </div>
+                <div class="m-t-xl">
+                  <div class="cell">
+                    <h3>{{"$" + " " + item.amountBlock$}}</h3>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="stats-title">
+                  <h5 class="header-panel-right">AMOUNT INVESTED</h5>
+                </div>
+                <div class="m-t-xl">
+                  <div class="cell">
+                    <h3>{{"$" + " " + item.amountInv$}}</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+  </div>
 </template>
+
+
 
 <script>
   export default {
+    acc: "#acc",
     data() {
       return {
-        items: {
-          accountEur: {
-            num: '22A333E',
-            amount: 399,
-            amountIn: 0,
-            amountOut: 190,
-            amountBlock: 0,
-            amountInv: 449
-          },
-          accountDol: {
-            accountNum: '15A363E',
-            amount: 400,
-            amountIn: 0,
-            amountOut: 290,
-            amountBlock: 0,
-            amountInvested: 139
-          },
-        }
+        items: [
+          { accountNum: '22A333E',
+            amountE: 399,
+            amountInE: 0,
+            amountOutE: 190,
+            amountBlockE: 0,
+            amountInvE: 449,
+            accountNum$: '15A363E',
+            amount$: 400,
+            amountIn$: 0,
+            amountOut$: 290,
+            amountBlock$: 12,
+            amountInv$: 139}
+        ]
       }
     },
     methods:{
-      meme: function(name, surname){
-        return name + surname
-      }
     }
   }
 </script>
 
 <style lang="css">
+  .accountBox {
+    margin: 10px;
+  }
+
   .cell {
     display: table-cell;
     vertical-align: middle;
   }
 
+  ul {
+    list-style-type: none;
+  }
 
   h1 {
     margin-top: 0px;
     margin-right: 10px;
   }
 
-  .space {
-    margin-top:10px;
-    margin-bottom:10px;
-  }
-  .panel-body.yellow {
-    border-top: 5px solid yellow;
-  }
-  .panel-body.white {
-    border-top: 5px solid floralwhite;
-  }
-  .panel-body.standard {
-    border-top: 5px solid lightgray;
-  }
-  .panel-body.green {
-    border-top: 5px solid limegreen;
-  }
-
-  .panel-body.blue {
-    border-top: 5px solid dodgerblue;
-  }
-  .panel-body.exclusive {
-
-    border-top: 5px solid #e7e353;
-  }
-  .panel-body {
-    background: #fff;
-    border: 1px solid #e4e5e7;
-    border-radius: 4px;
-    padding: 6px;
-    padding-left: 20px;
-    position: relative;
-    padding-right: 20px;
-  }
-  .page-header.centered {
-    text-align: center;
-    margin-top:20px;
-  }
-  .stat-cell {
-    border-top: 1px solid #6D6D6D !important;
-
-  }
-
-  h4.statheader {
-    color:limegreen;
-    font-weight: 100;
-
-  }
-  .stat-row {
-    display: table-row !important;
-    float: none;
-    width: 100%;
-  }
-
+.accountHeader {
+  text-align: center;
+}
+#acc {
+ font-color:green;
+}
   body {
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 13px;
@@ -181,25 +216,11 @@
     color: #555;
   }
 
-  .stat-panel {
-    background: #fff;
-    border-radius: 4px;
-    display: table;
-    margin-bottom: 22px;
-    overflow: hidden;
-    position: relative;
-    table-layout: fixed !important;
-    width: 100%;
-    border: 1px solid #c4c6c7;
+  .col-sm-12 {
+    margin-bottom: 20px;
   }
 
-
-  #main-menu-inner {
-    width: 240px;
-    text-decoration: none;
-  }
-
-  .hpanel .panel-body {
+.panel-body {
     background: #fff;
     border: 1px solid #e4e5e7;
     border-radius: 4px;

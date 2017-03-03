@@ -30,7 +30,7 @@
               <router-link to="/contact">Contact</router-link>
             </li>
             <li>
-              <router-link to="/dashboard" class="btn btn-success green">Personal account</router-link>
+              <router-link to="/dashboard" class="btn btn-default green">Personal account</router-link>
               </a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -288,7 +288,25 @@
     color: #3ac341;
   }
 
+  .btn-default {
+    background: #7ab35a;
+    border-color: #357ebd; /*set the color you want here*/
+    color:white;
+  }
+  .btn-default:hover {
+    color: black;
+    background-color: #b36757;
+    border-color: #285e8e; /*set the color you want here*/
+  }
 
+  .btn-default:active:focus {
+color:red;
+    background:red;
+  }
+
+  a.btn.btn-default.green.router-link-active {
+    color: white;
+  }
 
   footer .copyright {
     padding-top: 40px;
