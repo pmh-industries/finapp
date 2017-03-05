@@ -18,10 +18,12 @@
                 </div>
                 <div class="m-t-xl">
                   <div class="cell">
-                    <h3>{{"€" + " " + item.amountE}}</h3>
+                    <transition name="bounce">
+                    <h3 v-if="show">{{"€" + " " + item.amountE}}</h3>
+                    </transition>
                   </div>
                   <div class="cell">
-                    <button type="button" class="btn btn-success btn-sm mrgbtn">
+                    <button @click="show = !show" type="button" class="btn btn-success btn-sm mrgbtn">
                       <span class="glyphicon glyphicon-arrow-right"></span>
                     </button>
                   </div>
@@ -75,6 +77,7 @@
               </div>
             </div>
           </div>
+            </transition>
         </div>
       </div>
 
@@ -163,6 +166,7 @@
     acc: "#acc",
     data() {
       return {
+        show: true,
         items: [
           { accountNum: '22A333E',
             amountE: 399,
@@ -235,6 +239,35 @@
   }
   h1 {
     font-size: 23px;
+  }
+
+  .bounce-enter-active {
+    animation: bounce-in .5s;
+  }
+  .bounce-leave-active {
+    animation: bounce-out .5s;
+  }
+  @keyframes bounce-in {
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes bounce-out {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(0);
+    }
   }
 </style>
 

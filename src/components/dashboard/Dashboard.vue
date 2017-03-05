@@ -63,11 +63,7 @@
       <br/>
       <h3>Available Packages</h3>
     </div>
-
-
-
   <div class="row">
-
     <div class="col-md-6 package-active">
       <div class="animate-panel">
         <div class="panel-body standard">
@@ -181,18 +177,16 @@
                   </div>
                 </div>
                 <div class="col-md-2 space ">
-                  <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">90
-                      <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">90</a></li>
-                      <li><a href="#">180</a></li>
-                      <li><a href="#">360</a></li>
-                      <li><a href="#">480</a></li>
-                      <li><a href="#">1500</a></li>
-                      <li><a href="#">1980</a></li>
-                    </ul>
-                  </div>
+
+
+                    <select v-model="selected" class="dropdown-menu">
+                      <option>90</option>
+                      <option>360</option>
+                      <option>480</option>
+                      <option>1500</option>
+                      <option>1980</option>
+                    </select>
+                    <span>Selected: {{ selected }}</span>
                 </div>
                 <div class="col-md-3 space">
                   <button class="btn btn-success">BUY</button>

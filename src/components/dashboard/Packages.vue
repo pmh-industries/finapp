@@ -1,896 +1,93 @@
-<template lang="html">
-  <div id="main-wrapper">
-    <div id="content-wrapper">
+<template>
 
-      <div class="navbar-inner col-sm-4">
-        <div class="navbar-header">
-          <div id="main-menu-inner">
-            <div class="text-bg">
-              <span>{{client.surname + " " + client.name}}</span>
+  <div class="row">
+  <div class="animate-panel">
+    <div class="panel-body standard">
+      <div class="stat-panel">
+        <div class="stat-row">
+  <li v-for="th in packages" class="stat-panel"> <br>
+    {{th.label}} <br>
+    <select class="btn btn-default dropdown-toggle" v-model="selected">
+      <option v-for="test in tests" :value="test">{{ test.text }}</option>
+    </select>
+    <br>
+    Currency: {{th.currency}} <br>
+    Profit: {{th.profit}} <br>
+    Commision: {{th.commission}}<br>
+    <br>
+    <br>
+  </li>
+              </div>
             </div>
-            <div class="text-bg">
-              <span>{{client.account}}</span>
-            </div>
-            <ul class="navigation">
-              <li>
-                <router-link to="/dashboard">Dashboard</router-link>
-              </li>
-              <li>
-                <router-link to="/">Account</router-link>
-              </li>
-              <li>
-                <router-link to="/">Profile</router-link>
-              </li>
-              <li>
-                <router-link to="/">Documents</router-link>
-              </li>
-              <li>
-                <router-link to="/">History</router-link>
-              </li>
-              <li>
-                <router-link to="/">Managers</router-link>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="page-header">
-        <h1>Currency rate</h1>
-        <div class="row col-sm-8">
-          <div class="col-sm-8">
-            <p>
-              The reference rates of European Central Bank. Usually updated around 16:00 CET
-            </p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
-            <div class="cell">
-        <span>
-          <span>EUR / USD : 1 / {{currency.eur}}</span>
-        </span>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
-            <div class="cell">
-        <span>
-          USD / EUR : 1 / {{currency.usd}}
-        </span>
-            </div>
-          </div>
-        </div>
+</div>
       </div>
     </div>
-
-    <div class="page-header centered">
-      <h3>Account current EUR</h3>
-    </div>
-
-    <div class="page-header">
-      <div class="col-sm-12">
-        <div class="animate-panel">
-          <div class="panel-body">
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-              <div class="stats-title">
-                <h5>{{client.account}}</h5>
-              </div>
-              <div class="m-t-xl">
-                <div class="cell">
-                  <h3>{{"€" + " " + client.amount}}</h3>
-                </div>
-                <div class="cell">
-                  <button type="button" class="btn btn-success btn-sm mrgbtn">
-                    <span class="glyphicon glyphicon-arrow-right"></span>
-                  </button>
-                </div>
-              </div>
-
-            </div>
-
-            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
-              <div class="stats-title">
-                <h5 class="header-panel-right">AMOUNT IN</h5>
-              </div>
-              <div class="m-t-xl">
-                <div class="cell">
-                  <h3>{{"€" + " " + client.amountIn}}</h3>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
-              <div class="stats-title">
-                <h5 class="header-panel-right">AMOUNT OUT</h5>
-              </div>
-              <div class="m-t-xl">
-                <div class="cell">
-                  <h3>{{"€" + " " + client.amountOut}}</h3>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
-              <div class="stats-title">
-                <h5 class="header-panel-right">AMOUNT BLOCKED</h5>
-              </div>
-              <div class="m-t-xl">
-                <div class="cell">
-                  <h3>{{"€" + " " + client.amountBlocked}}</h3>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-              <div class="stats-title">
-                <h5 class="header-panel-right">AMOUNT INVESTED</h5>
-              </div>
-              <div class="m-t-xl">
-                <div class="cell">
-                  <h3>{{"€" + " " + client.amountInvested}}</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="page-header centered">
-      <br/>
-      <h3 >Account current USD</h3>
-    </div>
-
-    <div class="page-header">
-      <div class="col-sm-12">
-        <div class="animate-panel">
-          <div class="panel-body">
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-              <div class="stats-title">
-                <h5>{{"$" + " " + client.account}}</h5>
-              </div>
-              <div class="m-t-xl">
-                <div class="cell">
-                  <h3>{{"$" + " " + accountEur.account.amountIn}}</h3>
-                </div>
-                <div class="cell">
-                  <button type="button" class="btn btn-success btn-sm mrgbtn">
-                    <span class="glyphicon glyphicon-arrow-right"></span>
-                  </button>
-                </div>
-              </div>
-
-            </div>
-
-            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
-              <div class="stats-title">
-                <h5 class="header-panel-right">AMOUNT IN</h5>
-              </div>
-              <div class="m-t-xl">
-                <div class="cell">
-                  <h3>{{"$" + " "+ client.amountOut}}</h3>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
-              <div class="stats-title">
-                <h5 class="header-panel-right">AMOUNT OUT</h5>
-              </div>
-              <div class="m-t-xl">
-                <div class="cell">
-                  <h3>{{"$" + " "+ client.amountOut}}</h3>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
-              <div class="stats-title">
-                <h5 class="header-panel-right">AMOUNT BLOCKED</h5>
-              </div>
-              <div class="m-t-xl">
-                <div class="cell">
-                  <h3>{{"$" + " "+ client.amountBlocked}}</h3>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-              <div class="stats-title">
-                <h5 class="header-panel-right">AMOUNT INVESTED</h5>
-              </div>
-              <div class="m-t-xl">
-                <div class="cell">
-                  <h3>{{"$" + " "+ client.amountInvested}}</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="page-header centered">
-      <br/>
-      <h3>Available Packages</h3>
-    </div>
-
-
-
-    <div class="row">
-
-      <div class="col-md-6 package-active">
-        <div class="animate-panel">
-          <div class="panel-body standard">
-            <div class="stat-panel">
-              <div class="stat-row">
-                <div class="col-md-3 space">
-                  <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">EUR
-                      <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">EUR</a></li>
-                      <li><a href="#">USD</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-md-2 space ">
-                  <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">90
-                      <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">90</a></li>
-                      <li><a href="#">180</a></li>
-                      <li><a href="#">360</a></li>
-                      <li><a href="#">480</a></li>
-                      <li><a href="#">1500</a></li>
-                      <li><a href="#">1980</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-md-3 space">
-                  <button class="btn btn-success">BUY</button>
-                </div>
-              </div>
-
-              <div class="stat-row">
-
-                <div class="stat-counters bg-default bg-def no-border-b no-padding text-center">
-
-                  <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
-      <span class="text-bg">
-      <h4 class="statheader">{{accountEur.standard.days[1]}}</h4>
-      </span><br/>
-      <span class="text-xs">
-        Period days
-      </span>
-                  </div>
-
-                  <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
-      <span class="text-bg">
-         <h4 class="statheader">{{accountEur.standard.commission[1]}}</h4>
-      </span><br/>
-      <span class="text-xs">
-        Commission
-      </span>
-                  </div>
-
-                  <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
-      <span class="text-bg">
-        <h4 class="statheader">{{'€' + " " + accountEur.standard.profit}}</h4>
-      </span><br/>
-      <span class="text-xs">
-        Profit
-      </span>
-                  </div>
-                </div>
-                <div class="stat-counters bg-default bg-def no-border-b no-padding text-center">
-
-                  <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
-      <span class="text-bg">
-      <h4 class="statheader">{{accountEur.standard.days[0]}}</h4>
-      </span><br/>
-      <span class="text-xs">
-        PERCENT PER MONTH
-      </span>
-                  </div>
-
-                  <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
-      <span class="text-bg">
-         <h4 class="statheader">{{accountEur.standard.commission[0]}}</h4>
-      </span><br/>
-      <span class="text-xs">
-        PERIOD PERCENT
-      </span>
-                  </div>
-
-                  <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
-
-      <span class="text-xs">
-        <button class="btn btn-default">Info</button>
-      </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 package-active">
-        <div class="animate-panel">
-          <div class="panel-body exclusive">
-            <div class="stat-panel">
-              <div class="stat-row">
-                <div class="col-md-3 space">
-                  <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">USD
-                      <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">USD</a></li>
-                      <li><a href="#">EUR</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-md-2 space ">
-                  <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">90
-                      <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">90</a></li>
-                      <li><a href="#">180</a></li>
-                      <li><a href="#">360</a></li>
-                      <li><a href="#">480</a></li>
-                      <li><a href="#">1500</a></li>
-                      <li><a href="#">1980</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-md-3 space">
-                  <button class="btn btn-success">BUY</button>
-                </div>
-              </div>
-
-
-              <div class="stat-row">
-
-                <div class="stat-counters bg-default bg-def no-border-b no-padding text-center">
-
-                  <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
-      <span class="text-bg">
-      <h4 class="statheader">{{ accountEur.exclusive.days[1]}}</h4>
-      </span><br/>
-      <span class="text-xs">
-        Perion days
-      </span>
-                  </div>
-
-                  <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
-      <span class="text-bg">
-        <h4 class="statheader">{{ accountEur.exclusive.commission[2]}}</h4>
-      </span><br/>
-      <span class="text-xs">
-        Commision
-      </span>
-                  </div>
-
-                  <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
-      <span class="text-bg">
-        <h4 class="statheader">{{'€' + " " + accountEur.exclusive.profit}}</h4>
-      </span><br/>
-      <span class="text-xs">
-        Profit
-      </span>
-                  </div>
-
-                </div>
-
-                <div class="stat-counters bg-default bg-def no-border-b no-padding text-center">
-
-                  <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
-      <span class="text-bg">
-      <h4 class="statheader">{{ accountEur.exclusive.days[1]}}</h4>
-      </span><br/>
-      <span class="text-xs">
-        PERCENT PER MONTH
-      </span>
-                  </div>
-
-                  <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
-      <span class="text-bg">
-         <h4 class="statheader">{{ accountEur.exclusive.commission[1]}}</h4>
-      </span><br/>
-      <span class="text-xs">
-        PERIOD PERCENT
-      </span>
-                  </div>
-
-                  <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
-
-      <span class="text-xs">
-        <button class="btn btn-default">Info</button>
-      </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-
-      <div class="col-md-6 package-active">
-        <div class="animate-panel">
-          <div class="panel-body blue">
-            <div class="stat-panel">
-              <div class="stat-row">
-                <div class="col-md-3 space">
-                  <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">EUR
-                      <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">EUR</a></li>
-                      <li><a href="#">USD</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-md-2 space ">
-                  <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">90
-                      <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">90</a></li>
-                      <li><a href="#">180</a></li>
-                      <li><a href="#">360</a></li>
-                      <li><a href="#">480</a></li>
-                      <li><a href="#">1500</a></li>
-                      <li><a href="#">1980</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-md-3 space">
-                  <button class="btn btn-success">BUY</button>
-                </div>
-              </div>
-              <div class="stat-row">
-
-                <div class="stat-counters bg-default bg-def no-border-b no-padding text-center">
-
-                  <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
-      <span class="text-bg">
-      <h4 class="statheader">{{client.days[1]}}</h4>
-      </span><br/>
-      <span class="text-xs">
-        Period days
-      </span>
-                  </div>
-
-                  <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
-      <span class="text-bg">
-         <h4 class="statheader">{{accountEur.blue.commission[2]}}</h4>
-      </span><br/>
-      <span class="text-xs">
-        Commision
-      </span>
-                  </div>
-
-                  <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
-      <span class="text-bg">
-        <h4 class="statheader">{{'€' + " " + accountEur.blue.profit}}</h4>
-      </span><br/>
-      <span class="text-xs">
-        Profit
-      </span>
-                  </div>
-                </div>
-                <div class="stat-counters bg-default bg-def no-border-b no-padding text-center">
-
-                  <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
-      <span class="text-bg">
-      <h4 class="statheader">{{accountEur.blue.days[1]}}</h4>
-      </span><br/>
-      <span class="text-xs">
-        PERCENT PER MONTH
-      </span>
-                  </div>
-
-                  <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
-      <span class="text-bg">
-         <h4 class="statheader">{{accountEur.blue.percentMonth[1]}}</h4>
-      </span><br/>
-      <span class="text-xs">
-        PERIOD PERCENT
-      </span>
-                  </div>
-                  <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
-      <span class="text-xs">
-        <button class="btn btn-default">Info</button>
-      </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 package-active">
-        <div class="animate-panel">
-          <div class="panel-body white">
-            <div class="stat-panel">
-              <div class="stat-row">
-                <div class="col-md-3 space">
-                  <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">USD
-                      <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">USD</a></li>
-                      <li><a href="#">EUR</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-md-2 space ">
-                  <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">90
-                      <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">90</a></li>
-                      <li><a href="#">180</a></li>
-                      <li><a href="#">360</a></li>
-                      <li><a href="#">480</a></li>
-                      <li><a href="#">1500</a></li>
-                      <li><a href="#">1980</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-md-3 space">
-                  <button class="btn btn-success">BUY</button>
-                </div>
-              </div>
-              <div class="stat-row">
-                <div class="stat-counters bg-default bg-def no-border-b no-padding text-center">
-                  <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
-      <span class="text-bg">
-      <h4 class="statheader">{{client.days[1]}}</h4>
-      </span><br/>
-      <span class="text-xs">
-        Perion days
-      </span>
-                  </div>
-
-                  <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
-      <span class="text-bg">
-         <h4 class="statheader">{{client.commission[1]}}</h4>
-      </span><br/>
-      <span class="text-xs">
-        Commision
-      </span>
-                  </div>
-
-                  <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
-      <span class="text-bg">
-        <h4 class="statheader">{{'€' + " " + client.profit}}</h4>
-      </span><br/>
-      <span class="text-xs">
-        Profit
-      </span>
-                  </div>
-
-                </div>
-
-                <div class="stat-counters bg-default bg-def no-border-b no-padding text-center">
-
-                  <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
-      <span class="text-bg">
-      <h4 class="statheader">{{client.days[1]}}</h4>
-      </span><br/>
-      <span class="text-xs">
-        PERCENT PER MONTH
-      </span>
-                  </div>
-
-                  <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
-      <span class="text-bg">
-         <h4 class="statheader">{{client.commission[1]}}</h4>
-      </span><br/>
-      <span class="text-xs">
-        PERIOD PERCENT
-      </span>
-                  </div>
-                  <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
-      <span class="text-xs">
-        <button class="btn btn-default">Info</button>
-      </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-
-      <div class="col-md-6 package-active">
-        <div class="animate-panel">
-          <div class="panel-body yellow">
-            <div class="stat-panel">
-              <div class="stat-row">
-                <div class="col-md-3 space">
-                  <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">EUR
-                      <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">EUR</a></li>
-                      <li><a href="#">USD</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-md-2 space ">
-                  <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">90
-                      <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">90</a></li>
-                      <li><a href="#">180</a></li>
-                      <li><a href="#">360</a></li>
-                      <li><a href="#">480</a></li>
-                      <li><a href="#">1500</a></li>
-                      <li><a href="#">1980</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-md-3 space">
-                  <button class="btn btn-success">BUY</button>
-                </div>
-              </div>
-              <div class="stat-row">
-
-                <div class="stat-counters bg-default bg-def no-border-b no-padding text-center">
-
-                  <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
-      <span class="text-bg">
-      <h4 class="statheader">{{accountEur.yellow.profit}}</h4>
-      </span><br/>
-      <span class="text-xs">
-        Period days
-      </span>
-                  </div>
-
-                  <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
-      <span class="text-bg">
-         <h4 class="statheader">{{accountEur.yellow.commission[1]}}</h4>
-      </span><br/>
-      <span class="text-xs">
-        Commission
-      </span>
-                  </div>
-
-                  <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
-      <span class="text-bg">
-        <h4 class="statheader">{{'€' + " " + accountEur.yellow.profit}}</h4>
-      </span><br/>
-      <span class="text-xs">
-        Profit
-      </span>
-                  </div>
-                </div>
-                <div class="stat-counters bg-default bg-def no-border-b no-padding text-center">
-
-                  <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
-      <span class="text-bg">
-      <h4 class="statheader">{{accountEur.yellow.days[1]}}</h4>
-      </span><br/>
-      <span class="text-xs">
-        PERCENT PER MONTH
-      </span>
-                  </div>
-
-                  <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
-      <span class="text-bg">
-         <h4 class="statheader">{{accountEur.yellow.commission[1]}}</h4>
-      </span><br/>
-      <span class="text-xs">
-        PERIOD PERCENT
-      </span>
-                  </div>
-
-                  <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
-
-      <span class="text-xs">
-        <button class="btn btn-default">Info</button>
-      </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 package-active">
-        <div class="animate-panel">
-          <div class="panel-body green">
-            <div class="stat-panel">
-              <div class="stat-row">
-                <div class="col-md-3 space">
-                  <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">USD
-                      <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">USD</a></li>
-                      <li><a href="#">EUR</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-md-2 space ">
-                  <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">90
-                      <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">90</a></li>
-                      <li><a href="#">180</a></li>
-                      <li><a href="#">360</a></li>
-                      <li><a href="#">480</a></li>
-                      <li><a href="#">1500</a></li>
-                      <li><a href="#">1980</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-md-3 space">
-                  <button class="btn btn-success">BUY</button>
-                </div>
-              </div>
-
-
-              <div class="stat-row">
-
-                <div class="stat-counters bg-default bg-def no-border-b no-padding text-center">
-
-                  <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
-      <span class="text-bg">
-      <h4 class="statheader">{{ accountEur.green.days[1]}}</h4>
-      </span><br/>
-      <span class="text-xs">
-        Perion days
-      </span>
-                  </div>
-
-                  <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
-      <span class="text-bg">
-         <h4 class="statheader">{{ accountEur.green.commission[1]}}</h4>
-      </span><br/>
-      <span class="text-xs">
-        Commision
-      </span>
-                  </div>
-
-                  <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
-      <span class="text-bg">
-        <h4 class="statheader">{{'€' + " " + accountEur.green.profit}}</h4>
-      </span><br/>
-      <span class="text-xs">
-        Profit
-      </span>
-                  </div>
-
-                </div>
-
-                <div class="stat-counters bg-default bg-def no-border-b no-padding text-center">
-
-                  <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
-      <span class="text-bg">
-      <h4 class="statheader">{{ accountEur.green.days[1]}}</h4>
-      </span><br/>
-      <span class="text-xs">
-        PERCENT PER MONTH
-      </span>
-                  </div>
-
-                  <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
-      <span class="text-bg">
-         <h4 class="statheader">{{ meme(client.surname, client.name)}}</h4>
-      </span><br/>
-      <span class="text-xs">
-        PERIOD PERCENT
-      </span>
-                  </div>
-
-                  <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
-
-      <span class="text-xs">
-        <button class="btn btn-default">Info</button>
-      </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
   </div>
+</div>
 </template>
+
+
 
 <script>
   export default {
+    pack: "#packages",
+    box: ".col-md-6 package-active",
+    animate: ".animate-panel",
+    panelBody: ".panel-body",
+    accountNumber: ".col-lg-3 col-md-4 col-sm-6 col-xs-12",
+
+
     data() {
       return {
-        currency:{
-          usd:1.23,
-          eur:0.99
-        },
-        client: {
-          name: 'Martin',
-          surname: 'Butts',
-          account: "1EG23456A7",
-          amount: 0,
-          investment: 999,
-          profit: 636,
-          price: 7.50,
-          commission: [10, 12, 15, 16],
-          amountOut: 0,
-          amountIn: 190,
-          amountBlocked:49,
-          accountStatus: 22344,
-          widthdraw: 200,
-          amountInvested: 300,
-          balance: 22144,
-          days: [365, 720, "3 years"]
-        },
-        accountEur: {
-          account: {
-            amountOut: 0,
-            amountIn: 190,
-            amountBlocked:49,
-          },
+        tests: [
+          { value: 1, text: '€' },
+          { value: 2, text: '$' },
+        ],
+        packages: {
           yellow: {
+            label: "Yellow package",
+            currency: "€",
             profit: 3338,
-            commission: [10, 12, 15, 16],
-            days: [365, 720, "3 years"],
-            percentMonth: [12,54,53,22]
+            commission: 10,
+            days: 365,
+            percentMonth: 12
           },
           standard: {
+            label: "Standard package",
+            currency: "$",
             profit: 4438,
-            commission: [10, 12, 15, 16],
-            days: [365, 720, "3 years"],
-            percentMonth: [12,54,53,22]
+            commission: 12,
+            days: 720,
+            percentMonth:  54
           },
           green: {
+            label: "Green package",
+            currency: "€",
             profit: 4238,
-            commission: [10, 12, 15, 16],
-            days: [365, 720, "3 years"],
-            percentMonth: [12,54,53,22]
+            commission: 15,
+            days: 365,
+            percentMonth: 54
           },
           exclusive: {
+            label: "Exlusive package",
+            currency: "$",
             profit: 4338,
-            commission: [10, 12, 15, 16],
-            days: [365, 720, "3 years"],
-            percentMonth: [12,54,53,22]
+            commission: 16,
+            days: 720,
+            percentMonth: 100
           },
           blue: {
+            label: "Blue package",
+            currency: "€",
             profit: 5238,
-            commission: [10, 12, 15, 16],
-            days: [365, 720, "3 years"],
-            percentMonth: [12,54,53,22]
+            commission: 18,
+            days: "3 years",
+            percentMonth: 120
           }
-        }
+        },
       }
     },
     methods:{
-      meme: function(name, surname){
-        return name + surname
-      }
     }
   }
 </script>
@@ -905,6 +102,11 @@
   h1 {
     margin-top: 0px;
     margin-right: 10px;
+  }
+
+  .dropdownMenu{
+    background:green;
+    color:white;
   }
 
   .space {

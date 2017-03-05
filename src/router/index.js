@@ -9,6 +9,7 @@ import Investments from 'components/layout/Investments'
 import Contact from 'components/layout/Contact'
 import Dashboard from 'components/dashboard/Dashboard'
 import Account from 'components/dashboard/Account'
+import Packages from 'components/dashboard/Packages'
 
 
 Vue.use(Router)
@@ -49,6 +50,11 @@ export default new Router({
     path: '/Account',
     name: 'Account',
     component: Account
+    },
+    {
+      path: '/packages',
+      name: 'Packages',
+      component: Packages
     },
   ],
   mode: 'history'
