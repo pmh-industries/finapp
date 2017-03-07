@@ -35,6 +35,6 @@ const clients = {
     status: 'active',
     price:4.50
   },
-  }
+  };
 
 export default clients;

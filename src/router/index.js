@@ -12,7 +12,7 @@ import Account from 'components/dashboard/Account'
 import Packages from 'components/dashboard/Packages'
 
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   routes: [
