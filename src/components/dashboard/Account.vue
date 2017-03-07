@@ -4,7 +4,7 @@
         <div class="accountBox">
           <br>
           <h1 class="accountHeader">Account current EUR</h1><br>
-          <div class="col-sm-12">
+          <div class="col-sm-12" >
             <div class="animate-panel">
               <div class="panel-body">
                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
@@ -95,7 +95,23 @@
       }
     },
     methods:{
-    }
+      getPosts: function() {
+        var that = this
+        $.ajax({
+          url: 'https://jsonplaceholder.typicode.com/posts',
+          method: 'GET'
+        }).then(function (response) {
+          if(response.error) {
+            console.err("There was an error " + response.error);
+          } else {
+            console.log(response.posts);
+            this.posts = response.posts
+          }
+        }).catch(function (err) {
+          console.error(err);
+        });
+      }
+    },
   }
 </script>
 
