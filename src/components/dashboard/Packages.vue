@@ -1,6 +1,10 @@
 <template>
 
   <div class="packages" v-bind:class = {center:true}>
+    <div class="page-header centered">
+      <br/>
+      <h3>Available Packages</h3>
+    </div>
     <ul>
       <li class="col-xs-12 col-sm-4 col-md-4 col-lg-6 panel" v-for="th in packages">{{th.label}}<br>
         <select class="btn btn-default dropdown-toggle">
@@ -119,6 +123,14 @@
           },
           blue: {
             label: "Blue package",
+            currency: "€",
+            profit: 5238,
+            commission: 18,
+            days: "3 years",
+            percentMonth: 120
+          },
+          organge: {
+            label: "Orange package",
             currency: "€",
             profit: 5238,
             commission: 18,

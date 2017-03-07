@@ -52,7 +52,7 @@ export default new Router({
     component: Account
     },
     {
-      path: '/packages',
+      path: '/Packages',
       name: 'Packages',
       component: Packages
     },
