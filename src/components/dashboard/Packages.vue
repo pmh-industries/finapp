@@ -1,6 +1,7 @@
 <template>
 
   <div class="packages" v-bind:class = {center:true}>
+    
     <ul>
       <li class="col-xs-12 col-sm-4 col-md-4 col-lg-6 panel" v-for="th in packages">{{th.label}}<br>
         <select class="btn btn-default dropdown-toggle">
@@ -59,6 +60,10 @@
 
 
 <script>
+
+
+
+
   export default {
     pack: "#packages",
     box: ".col-md-6 package-active",

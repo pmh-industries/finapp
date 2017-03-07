@@ -1,4 +1,4 @@
-const clients = {
+const data1 = {
   client1: {
     name:'Veggie',
     image: 'http://lorempixel.com/200/100/sports/1/',
