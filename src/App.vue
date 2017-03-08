@@ -29,7 +29,10 @@
               <router-link to="/contact">Contact</router-link>
             </li>
             <li>
-              <router-link to="/dashboard" class="btn btn-default green">Personal account</router-link>
+              <router-link to="/login">Login</router-link>
+              </a></li>
+            <li>
+              <router-link to="/dashboard" class="btn btn-default">Personal account</router-link>
               </a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -278,6 +281,12 @@
     line-height: 30px;
     text-decoration: none;
   }
+  .bg{
+    position:absolute;
+    z-index:-1;
+    width:100%;
+    height:100%;
+  }
 
   footer .navigation li a:hover {
     color: #3ac341;
@@ -295,12 +304,7 @@
   }
 
   .btn-default:active:focus {
-color:red;
-    background:red;
-  }
-
-  a.btn.btn-default.green.router-link-active {
-    color: white;
+    background: #7ab35a;
   }
 
   footer .copyright {

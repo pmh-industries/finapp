@@ -10,6 +10,7 @@ import Contact from 'components/layout/Contact'
 import Dashboard from 'components/dashboard/Dashboard'
 import Account from 'components/dashboard/Account'
 import Packages from 'components/dashboard/Packages'
+import Login from 'components/layout/Login'
 
 
 Vue.use(Router);
@@ -55,6 +56,11 @@ export default new Router({
       path: '/Packages',
       name: 'Packages',
       component: Packages
+    },
+    {
+      path: '/Login',
+      name: 'Login',
+      component: Login
     },
   ],
   mode: 'history'

@@ -1,4 +1,6 @@
 <template>
+  <div class="row">
+    <div class="packages" v-bind:class = {center:true}>
     <ul>
       <li v-for="acc in accounts">
         <div class="accountBox">
@@ -66,6 +68,8 @@
         </div>
       </li>
     </ul>
+    </div>
+    </div>
 </template>
 
 <script>
@@ -146,7 +150,9 @@
     line-height: 1.42857143;
     color: #555;
   }
-
+  .center {
+    margin-left:-40px;
+  }
   .col-sm-12 {
     margin-bottom: 20px;
   }

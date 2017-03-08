@@ -1,68 +1,63 @@
 <template lang="html">
-  <div id="main-wrapper">
-    <div id="content-wrapper">
-      <div class="navbar-inner col-sm-4">
-        <div class="navbar-header">
-          <div id="main-menu-inner">
-            <div class="text-bg">
-              <span>{{client.surname + " " + client.name}}</span>
-            </div>
-            <div class="text-bg">
-              <span>{{client.account}}</span>
-            </div>
-            <ul class="navigation">
-              <li>
-                <router-link to="/dashboard">Dashboard</router-link>
-              </li>
-              <li>
-                <router-link to="/account">Account</router-link>
-              </li>
-              <li>
-                <router-link to="/packages">Packages</router-link>
-              </li>
-            </ul>
-          </div>
-        </div>
+  <div class="container-fluid">
+      <div class="col-sm-3 col-lg-2">
+        <nav class="navbar navbar- navbar-fixed-side" v-bind:class={gray:true}>
+          <ul class="navigation">
+            <h4>Personal account</h4>
+            <li>
+              <router-link to="/dashboard">Dashboard</router-link>
+            </li>
+            <li>
+              <router-link to="/account">Account</router-link>
+            </li>
+            <li>
+              <router-link to="/packages">Packages</router-link>
+            </li>
+          </ul>
+        </nav>
       </div>
 
-      <div class="page-header">
-        <div class="row col-sm-8">
-          <div class="col-sm-8 centered">
+      <div class="col-sm-9 col-lg-10">
+        <div class="row">
+          <div class="col-12">
             <h1 class="centered">Currency rate</h1>
             <p>
               The reference rates of European Central Bank. Usually updated around 16:00 CET
             </p>
+
           </div>
         </div>
-
         <div class="row">
-          <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
             <div class="cell">
-        <span>
-          <span>EUR / USD : 1 / {{currency.eur}}</span>
-        </span>
+              <span>EUR / USD : 1 / {{currency.eur}}</span>
+              <div class="cell">
+                <button class="btn btn-success btn-sm mrgbtn" type="button">
+                  <span class="glyphicon glyphicon-arrow-right"></span></button>
+              </div>
             </div>
           </div>
 
-          <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
             <div class="cell">
-        <span>
-          USD / EUR : 1 / {{currency.usd}}
-        </span>
+              <span>USD / EUR : 1 / {{currency.usd}}</span>
+              <div class="cell">
+                <button class="btn btn-success btn-sm mrgbtn" type="button">
+                  <span class="glyphicon glyphicon-arrow-right"></span></button>
+              </div>
             </div>
           </div>
-        </div>
+          <br>
+
+        <accounts/>
+
+        <packages/>
       </div>
     </div>
-
-    <!--imported accounts component-->
-    <accounts/>
-
-    <packages/>
-    </div>
-
-
+  </div>
 </template>
+
+
 
 <script>
   import Account from './Account'
@@ -145,11 +140,18 @@
 </script>
 
 <style lang="css">
+
+  body {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.42857143;
+    color: #555;
+  }
+
   .cell {
     display: table-cell;
     vertical-align: middle;
   }
-
 
   h1 {
     margin-top: 0px;
@@ -160,26 +162,7 @@
     margin-top:10px;
     margin-bottom:10px;
   }
-  .panel-body.yellow {
-    border-top: 5px solid yellow;
-  }
-  .panel-body.white {
-    border-top: 5px solid floralwhite;
-  }
-  .panel-body.standard {
-    border-top: 5px solid lightgray;
-  }
-  .panel-body.green {
-    border-top: 5px solid limegreen;
-  }
 
-  .panel-body.blue {
-    border-top: 5px solid dodgerblue;
-  }
-  .panel-body.exclusive {
-
-    border-top: 5px solid #e7e353;
-  }
   .panel-body {
     background: #fff;
     border: 1px solid #e4e5e7;
@@ -189,19 +172,18 @@
     position: relative;
     padding-right: 20px;
   }
+
   .page-header.centered {
     text-align: center;
     margin-top:20px;
   }
-.stat-cell {
-  border-top: 1px solid #6D6D6D !important;
-
+  .stat-cell {
+    border-top: 1px solid #6D6D6D !important;
 }
 
   h4.statheader {
     color:limegreen;
     font-weight: 100;
-
   }
   .stat-row {
     display: table-row !important;
@@ -211,25 +193,6 @@
 
   .centered {
     text-align:center;
-  }
-
-  body {
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 13px;
-    line-height: 1.42857143;
-    color: #555;
-  }
-
-  .stat-panel {
-    background: #fff;
-    border-radius: 4px;
-    display: table;
-    margin-bottom: 22px;
-    overflow: hidden;
-    position: relative;
-    table-layout: fixed !important;
-    width: 100%;
-    border: 1px solid #c4c6c7;
   }
 
 
@@ -253,5 +216,9 @@
   }
   h1 {
     font-size: 23px;
+  }
+  ul.navigation {
+    font-size: 15px;
+    background:lightgray;
   }
 </style>

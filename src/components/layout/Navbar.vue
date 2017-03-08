@@ -7,7 +7,8 @@
         <router-link to="/about" class="btn-lg">About</router-link>
         <router-link to="/registration" class="btn-lg">Registration</router-link>
         <router-link to="/investments" class="btn-lg">Investments</router-link>
-        <router-link to="/contact" class="btn-lg">Contact</router-link>
+        <router-link to="/investments" class="btn-lg">Investments</router-link>
+        <router-link to="/login" class="btn-lg">logint</router-link>
         <router-link to="/dashboard" class="btn-lg">Personal account</router-link>
       </div>
     </div>
