@@ -117,7 +117,7 @@
             color: "#1E90FF",
             label: "Yellow package",
             currency: "€",
-            profit: 3338,
+            profit: 3338 + "%",
             commission: 10 + "%",
             days: 365,
             percentMonth: 12 + "%",
