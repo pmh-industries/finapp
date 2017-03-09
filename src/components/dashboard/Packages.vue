@@ -2,8 +2,12 @@
 <div class="row">
   <div class="packages" v-bind:class = {center:true}>
 
+    <br>
+
+    <div class="row">
     <div class="page-header centered">
       <h3 >Available Packages</h3>
+    </div>
     </div>
 
     <ul>

@@ -37,10 +37,9 @@
           </ul>
         </div><!--/.nav-collapse -->
     </nav>
-    <div class="container">
 
         <router-view></router-view>
-    </div>
+
       <footer>
         <div class="container">
           <div class="row">
