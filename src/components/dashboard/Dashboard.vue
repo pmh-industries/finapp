@@ -1,15 +1,19 @@
 <template lang="html">
+
   <div class="container-fluid">
       <div class="col-sm-3 col-lg-2">
         <nav class="navbar navbar- navbar-fixed-side" v-bind:class={gray:true}>
           <ul class="navigation">
-            <h4>Personal account</h4>
+            <h5>Personal account</h5>
+            <hr>
             <li>
               <router-link to="/dashboard">Dashboard</router-link>
             </li>
+            <hr>
             <li>
               <router-link to="/account">Account</router-link>
             </li>
+            <hr>
             <li>
               <router-link to="/packages">Packages</router-link>
             </li>
@@ -55,6 +59,7 @@
       </div>
     </div>
   </div>
+
 </template>
 
 
@@ -219,6 +224,20 @@
   }
   ul.navigation {
     font-size: 15px;
-    background:lightgray;
+  }
+  .navigation, #main-menu {
+    padding: 46px 10px 10px;
+    border: 1px solid #7ab35a;
+  }
+
+  ol, ul {
+    margin-top: 0;
+    margin-bottom: 9px;
+  }
+
+  *, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
   }
 </style>

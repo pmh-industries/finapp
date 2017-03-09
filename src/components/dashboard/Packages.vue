@@ -7,27 +7,23 @@
     </div>
 
     <ul>
-      <li class="col-xs-12 col-sm-6 col-md-6 col-lg-6 panel" v-for="th in packages">{{th.label}}<br>
+      <div class="row">
+      <li class="col-xs-12 col-sm-12 col-md-12 col-lg-6 panel" v-for="th in packages">{{th.label}}<br>
 
-        <div class="row">
 
-          <div class="col-lg-3 col-md-3 col-sm-2 col-xs-2 space">
-
-        <select class="btn btn-default dropdown-toggle">
+          <div class="col-lg-3 col-md-4 col-sm-2 col-xs-2">
+            <select class="btn btn-default dropdown-toggle">
           <option v-for="part in currency" v-model="currency.value1">
             {{ part.text }}
           </option>
         </select>
-
             </div>
 
-
-          <div class="col-lg-3 col-md-4 col-sm-2 col-xs-2">
-            <h2 class="text">90</h2>
+          <div class="col-lg-3 col-md-4 col-sm-12 col-xs-2">
+            <h4 class="text">90</h4>
           </div>
 
-
-        <div class="col-lg-3 col-md-4 col-sm-2 col-xs-2 space">
+        <div class="col-lg-3 col-md-4 col-sm-12 col-xs-2 ">
           <select class="btn btn-default dropdown-toggle">
             <option v-for="nmb in inv">
               {{ nmb.text }}
@@ -35,10 +31,11 @@
           </select>
         </div>
 
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-2">
+            <button class="btn btn-success">BUY</button>
           </div>
-        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-2 space">
-          <button class="btn btn-success">BUY</button>
-        </div>
+
+        <br>
 
         <div class="stat-row">
 
@@ -80,6 +77,7 @@
         </div>
           </div>
       </li>
+        </div>
     </ul>
   </div>
 </div>
@@ -180,10 +178,6 @@
     margin-top: 0px;
     margin-right: 10px;
   }
-  .dropdown-toggle{
-    margin:10px;
-  }
-
   .center {
     margin-left:-40px;
   }

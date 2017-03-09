@@ -5,13 +5,14 @@
       <li v-for="acc in accounts">
         <div class="accountBox">
           <br>
-          <h1 class="accountHeader">Account current EUR</h1><br>
+          <h1 class="accountHeader">Account current EUR</h1>
+          <br>
           <div class="col-sm-12" >
             <div class="animate-panel">
               <div class="panel-body">
                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                   <div class="stats-title">
-                    <h5>{{acc.account}}</h5>
+                    <h4>{{acc.account}}</h4>
                   </div>
                   <div class="m-t-xl">
                     <div class="cell">
@@ -95,7 +96,11 @@
             amountBlock: "$" + 90,
             amountInv: "$" + 5000
           },
-        }
+        },
+        selectOptions: [
+          { text: 'Male', value: 'male' },
+          { text: 'Female', value: 'female'}
+        ]
       }
     },
     methods:{

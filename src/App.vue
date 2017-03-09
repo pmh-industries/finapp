@@ -39,9 +39,7 @@
     </nav>
     <div class="container">
 
-      <div class="content">
         <router-view></router-view>
-      </div>
     </div>
       <footer>
         <div class="container">
