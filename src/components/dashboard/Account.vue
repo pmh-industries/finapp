@@ -7,6 +7,7 @@
           <br>
           <h1 class="accountHeader">Account current EUR</h1>
           <br>
+        </div>
           <div class="col-sm-12" >
             <div class="animate-panel">
               <div class="panel-body">
@@ -66,7 +67,6 @@
               </div>
             </div>
           </div>
-        </div>
       </div>
     </div>
     </div>
@@ -145,6 +145,7 @@
 
 .accountHeader {
   text-align: center;
+
 }
 #acc {
  font-color:green;
@@ -174,6 +175,10 @@
   }
   h1 {
     font-size: 23px;
+  }
+
+  .center {
+    text-align: center;
   }
 
   .bounce-enter-active {

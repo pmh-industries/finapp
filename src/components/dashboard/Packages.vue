@@ -9,8 +9,6 @@
       <h3 >Available Packages</h3>
     </div>
 
-
-
       <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 panel" v-for="th in packages">{{th.label}}<br>
 
