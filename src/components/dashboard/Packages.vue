@@ -1,18 +1,18 @@
 <template>
+
 <div class="row">
-  <div class="packages" v-bind:class = {center:true}>
+  <div class="packages" :class = {center:true}>
 
     <br>
 
-    <div class="row">
     <div class="page-header centered">
       <h3 >Available Packages</h3>
     </div>
-    </div>
 
-    <ul>
+
+
       <div class="row">
-      <li class="col-xs-12 col-sm-12 col-md-12 col-lg-6 panel" v-for="th in packages">{{th.label}}<br>
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 panel" v-for="th in packages">{{th.label}}<br>
 
 
           <div class="col-lg-3 col-md-4 col-sm-2 col-xs-2">
@@ -80,9 +80,8 @@
           </div>
         </div>
           </div>
-      </li>
+      </div>
         </div>
-    </ul>
   </div>
 </div>
 </template>
@@ -182,10 +181,6 @@
     margin-top: 0px;
     margin-right: 10px;
   }
-  .center {
-    margin-left:-40px;
-  }
-
   .panel-body {
     background: #fff;
     border: 1px solid #e4e5e7;

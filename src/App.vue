@@ -37,9 +37,11 @@
           </ul>
         </div><!--/.nav-collapse -->
     </nav>
-
+<div class="container">
+  <div class="col-lg-12">
         <router-view></router-view>
-
+    </div>
+</div>
       <footer>
         <div class="container">
           <div class="row">
@@ -113,14 +115,6 @@
     </div>
     </template>
 
-    <script>
-      export default {
-      }
-    </script>
-
-    <style lang="css">
-    </style>
-
 
 <script>
 
@@ -131,20 +125,6 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  #wrapper {
-    background-color: #F1F1F1;
-  }
-
-  #app {
-    /*background-color: white;*/
-    /*font-family: 'Avenir', Helvetica, Arial, sans-serif;*/
-    /*-webkit-font-smoothing: antialiased;*/
-    /*-moz-osx-font-smoothing: grayscale;*/
-    /*text-align: center;*/
-    /*color: #2c3e50;*/
-    /*margin-top: 0px;*/
-    /*box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.1);*/
-  }
 
   footer {
     background: #243c4f;
