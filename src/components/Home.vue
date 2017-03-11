@@ -40,7 +40,7 @@
 
 export default {
   components: {
-    'map': Map,
+//    'map': Map,
   },
   name: 'home',
   data () {

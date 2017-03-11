@@ -34,6 +34,7 @@
             <li>
               <router-link to="/dashboard" class="btn btn-default">Personal account</router-link>
               </a></li>
+
           </ul>
         </div><!--/.nav-collapse -->
     </nav>

@@ -11,6 +11,7 @@ import Dashboard from 'components/dashboard/Dashboard'
 import Account from 'components/dashboard/Account'
 import Packages from 'components/dashboard/Packages'
 import Login from 'components/layout/Login'
+import AccountDash from 'components/dashboard/AccountDash'
 
 
 Vue.use(Router);
@@ -61,6 +62,11 @@ export default new Router({
       path: '/Login',
       name: 'Login',
       component: Login
+    },
+    {
+      path: '/AccountDash',
+      name: 'AccountDash',
+      component: AccountDash
     },
 
   ],

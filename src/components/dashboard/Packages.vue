@@ -166,6 +166,9 @@
       }
     },
     methods:{
+    },
+    calculations: {
+
     }
   }
 </script>
