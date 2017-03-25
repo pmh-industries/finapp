@@ -8,12 +8,14 @@
           <h1 class="accountHeader">Account current EUR</h1>
           <br>
         </div>
+
           <div class="col-sm-12" >
             <div class="animate-panel">
+
               <div class="panel-body">
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
                   <div class="stats-title">
-                    <h4>{{acc.account}}</h4>
+                    <h5>{{acc.account}}</h5>
                   </div>
                   <div class="m-t-xl">
                     <div class="cell">
@@ -24,6 +26,7 @@
                     </div>
                   </div>
                 </div>
+
                 <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
                   <div class="stats-title">
                     <h5 class="header-panel-right">AMOUNT IN</h5>
@@ -34,6 +37,7 @@
                     </div>
                   </div>
                 </div>
+
                 <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
                   <div class="stats-title">
                     <h5 class="header-panel-right">AMOUNT OUT</h5>
@@ -44,7 +48,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                   <div class="stats-title">
                     <h5 class="header-panel-right">AMOUNT BLOCKED</h5>
                   </div>
@@ -54,6 +59,7 @@
                     </div>
                   </div>
                 </div>
+
                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                   <div class="stats-title">
                     <h5 class="header-panel-right">AMOUNT INVESTED</h5>
@@ -64,6 +70,7 @@
                     </div>
                   </div>
                 </div>
+
               </div>
             </div>
           </div>
