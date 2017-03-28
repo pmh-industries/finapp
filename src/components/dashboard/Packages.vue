@@ -182,6 +182,9 @@
     margin-top: 0px;
     margin-right: 10px;
   }
+  .animate-panel{
+    background: #21273a;
+  }
   .panel-body {
     background: #fff;
     border: 1px solid #e4e5e7;

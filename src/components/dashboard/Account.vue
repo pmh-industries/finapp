@@ -209,5 +209,8 @@
       transform: scale(0);
     }
   }
+  .animate-panel{
+    background: #21273a;
+  }
 </style>
 

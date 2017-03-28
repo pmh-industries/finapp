@@ -12,6 +12,7 @@ import Account from 'components/dashboard/Account'
 import Packages from 'components/dashboard/Packages'
 import Login from 'components/layout/Login'
 import AccountDash from 'components/dashboard/AccountDash'
+import Darkdash from 'components/dashboard/Darkdash'
 
 
 Vue.use(Router);
@@ -67,6 +68,11 @@ export default new Router({
       path: '/AccountDash',
       name: 'AccountDash',
       component: AccountDash
+    },
+    {
+      path: '/Darkdash',
+      name: 'Darkdash',
+      component: Darkdash
     },
 
   ],
