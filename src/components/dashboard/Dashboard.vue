@@ -1,6 +1,6 @@
 <template lang="html">
 
-  <div class="container-fluid">
+  <div class="container-fluid dark">
       <div class="col-sm-3 col-lg-2">
         <nav class="navbar navbar-inverse navbar-no-bg" role="navigation">
             <div class="navbar-header">
@@ -42,8 +42,6 @@
             <p class="centered">
               The reference rates of European Central Bank. Usually updated around 16:00 CET
             </p>
-            <hr>
-
           </div>
         </div>
         <div class="row">
@@ -51,7 +49,7 @@
             <div class="cell">
               <span>EUR / USD : 1 / {{currency.eur}}</span>
               <div class="cell">
-                <button class="btn btn-success btn-sm mrgbtn" type="button">
+                <button v-on:click="mrgbtn" class="btn btn-success btn-sm mrgbtn" type="button">
                   <span class="glyphicon glyphicon-arrow-right"></span></button>
               </div>
             </div>
@@ -154,8 +152,11 @@
       }
     },
     methods:{
-      meme: function(name, surname){
-        return name + surname
+      mrgbtn: function (event) {
+  console.log("hello from console")
+//        if (event) {
+//          alert(event.target.tagName)
+//        }
       }
     }
   }
@@ -217,17 +218,13 @@
     float: none;
     width: 100%;
   }
-
   .centered {
     text-align:center;
   }
-
-
   #main-menu-inner {
     width: 240px;
     text-decoration: none;
   }
-
   .hpanel .panel-body {
     background: #fff;
     border: 1px solid #e4e5e7;
@@ -251,7 +248,6 @@
     padding: 46px 10px 10px;
     border: 1px solid #7ab35a;
   }
-
   ol, ul {
     margin-top: 0;
     margin-bottom: 9px;
