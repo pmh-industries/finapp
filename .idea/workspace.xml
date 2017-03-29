@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c243568-5c3d-4218-a2c7-b633dd39d0e7" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/cssxfire.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/finapp.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/finapp_node_modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/dashboard/Account.vue" afterPath="$PROJECT_DIR$/src/components/dashboard/Account.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/dashboard/Darkdash.vue" afterPath="$PROJECT_DIR$/src/components/dashboard/Darkdash.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/dashboard/Dashboard.vue" afterPath="$PROJECT_DIR$/src/components/dashboard/Dashboard.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/dashboard/Packages.vue" afterPath="$PROJECT_DIR$/src/components/dashboard/Packages.vue" />
     </list>
     <ignored path="finapp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,7 +43,7 @@
           <file leaf-file-name="Dashboard.vue" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/dashboard/Dashboard.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1935">
+                <state relative-caret-position="2535">
                   <caret line="216" column="3" selection-start-line="216" selection-start-column="3" selection-end-line="216" selection-end-column="3" />
                   <folding>
                     <element signature="e#2652#4560#0" expanded="true" />
@@ -98,7 +101,7 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="Packages.vue" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/components/dashboard/Packages.vue">
               <provider selected="true" editor-type-id="text-editor">
@@ -171,9 +174,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="350" />
-    <option name="width" value="1016" />
-    <option name="height" value="768" />
+    <option name="x" value="600" />
+    <option name="y" value="154" />
+    <option name="width" value="644" />
+    <option name="height" value="746" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -306,7 +310,6 @@
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
-    <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -496,34 +499,35 @@
       <workItem from="1488935446003" duration="26244000" />
       <workItem from="1489134159429" duration="7932000" />
       <workItem from="1490411834631" duration="20447000" />
+      <workItem from="1490790755772" duration="990000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="193560000" />
+    <option name="totallyTimeSpent" value="194550000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="350" y="0" width="1016" height="768" extended-state="6" />
-    <editor active="true" />
+    <frame x="600" y="154" width="644" height="746" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10472279" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1744186" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.72911394" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44692144" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="CSS-X-Fire" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32943925" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13774104" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14662756" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32872927" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -660,10 +664,11 @@
         <state relative-caret-position="165">
           <caret line="44" column="6" selection-start-line="44" selection-start-column="6" selection-end-line="44" selection-end-column="6" />
           <folding>
-            <element signature="e#707#1701#0" expanded="false" />
-            <element signature="e#719#1680#0" expanded="false" />
+            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#1158#1243#0" expanded="true" />
             <element signature="e#1249#1322#0" expanded="true" />
-            <element signature="e#1495#1586#0" expanded="false" />
+            <element signature="e#1416#1489#0" expanded="true" />
+            <element signature="e#1592#1674#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -711,7 +716,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -854,7 +858,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1185">
           <caret line="79" column="8" selection-start-line="79" selection-start-column="8" selection-end-line="79" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -862,22 +865,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3330">
           <caret line="223" column="11" selection-start-line="223" selection-start-column="11" selection-end-line="223" selection-end-column="11" />
-          <folding>
-            <element signature="e#1757#3700#0" expanded="true" />
-            <element signature="e#1775#1836#0" expanded="true" />
-            <element signature="e#1864#3641#0" expanded="true" />
-            <element signature="e#1933#2016#0" expanded="true" />
-            <element signature="e#2031#2200#0" expanded="true" />
-            <element signature="e#2221#3632#0" expanded="true" />
-            <element signature="e#2241#2499#0" expanded="true" />
-            <element signature="e#2521#2724#0" expanded="true" />
-            <element signature="e#2743#2943#0" expanded="true" />
-            <element signature="e#2966#3170#0" expanded="true" />
-            <element signature="e#3188#3394#0" expanded="true" />
-            <element signature="e#3414#3622#0" expanded="true" />
-            <element signature="e#3661#3668#0" expanded="true" />
-            <element signature="e#3688#3696#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -951,7 +938,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/dashboard/Dashboard.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1935">
+        <state relative-caret-position="2535">
           <caret line="216" column="3" selection-start-line="216" selection-start-column="3" selection-end-line="216" selection-end-column="3" />
           <folding>
             <element signature="e#2652#4560#0" expanded="true" />
@@ -964,10 +951,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/dashboard/Account.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="36" column="10" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
+          <folding>
+            <element signature="e#978#2262#0" expanded="true" />
+            <element signature="e#1023#1745#0" expanded="true" />
+            <element signature="e#1063#1613#0" expanded="true" />
+            <element signature="e#1087#1330#0" expanded="true" />
+            <element signature="e#1354#1602#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/dashboard/Packages.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="55" selection-start-line="3" selection-start-column="55" selection-end-line="3" selection-end-column="55" />
+        <state relative-caret-position="15">
+          <caret line="1" column="31" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="31" />
           <folding>
             <element signature="e#1829#3772#0" expanded="true" />
             <element signature="e#1847#1908#0" expanded="true" />
@@ -983,20 +984,6 @@
             <element signature="e#3486#3694#0" expanded="true" />
             <element signature="e#3733#3740#0" expanded="true" />
             <element signature="e#3760#3768#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/dashboard/Account.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="36" column="10" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
-          <folding>
-            <element signature="e#978#2262#0" expanded="true" />
-            <element signature="e#1023#1745#0" expanded="true" />
-            <element signature="e#1063#1613#0" expanded="true" />
-            <element signature="e#1087#1330#0" expanded="true" />
-            <element signature="e#1354#1602#0" expanded="true" />
           </folding>
         </state>
       </provider>
