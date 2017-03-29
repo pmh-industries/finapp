@@ -35,9 +35,7 @@
     <hr>
     </div>
     </div>
-
 </template>
-
 <script>
   export default {
     acc: "#acc",
