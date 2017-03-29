@@ -18,13 +18,17 @@
                 <li>
                   <router-link to="/dashboard">Dashboard</router-link>
                 </li>
-                <hr>
+
                 <li>
                   <router-link to="/account">Account</router-link>
                 </li>
-                <hr>
+
                 <li>
                   <router-link to="/packages">Packages</router-link>
+                </li>
+
+                <li>
+                  <router-link to="/accountDash">Account steps</router-link>
                 </li>
               </ul>
             </div>
@@ -35,7 +39,7 @@
         <div class="row">
           <div class="col-12">
             <h1 class="centered">Currency rate</h1>
-            <p>
+            <p class="centered">
               The reference rates of European Central Bank. Usually updated around 16:00 CET
             </p>
           </div>
@@ -60,7 +64,8 @@
               </div>
             </div>
           </div>
-          <br>
+          </div>
+        <hr>
 
         <accounts/>
 
@@ -174,6 +179,11 @@
   h1 {
     margin-top: 0px;
     margin-right: 10px;
+  }
+
+  .navbar-brand {
+    font-size:15px;
+    color:white;
   }
 
   .space {
