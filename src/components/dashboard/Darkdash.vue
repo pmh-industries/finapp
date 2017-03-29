@@ -1,179 +1,62 @@
 <template lang="html">
 <div class="container-fluid">
   <div class="row">
-    <div class="col-sm-3 col-md-2 sidebar navbar navbar-inverse navbar-no-bg">
-      <ul class="nav nav-sidebar">
-        <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Reports</a></li>
-        <li><a href="#">Analytics</a></li>
-        <li><a href="#">Export</a></li>
-      </ul>
-      <ul class="nav nav-sidebar">
-        <li><a href="">Nav item</a></li>
-        <li><a href="">Nav item again</a></li>
-        <li><a href="">One more nav</a></li>
-        <li><a href="">Another nav item</a></li>
-        <li><a href="">More navigation</a></li>
-      </ul>
-      <ul class="nav nav-sidebar">
-        <li><a href="">Nav item again</a></li>
-        <li><a href="">One more nav</a></li>
-        <li><a href="">Another nav item</a></li>
-      </ul>
-    </div>
-    <div class="col-sm-9 col-sm-offset-3 col-md-8 col-md-offset-1 main">
-      <h1 class="page-header">Dashboard</h1>
-
-      <div class="row placeholders">
-        <div class="col-xs-6 col-sm-3 placeholder">
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-          <h4>Label</h4>
-          <span class="text-muted">Something else</span>
-        </div>
-        <div class="col-xs-6 col-sm-3 placeholder">
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-          <h4>Label</h4>
-          <span class="text-muted">Something else</span>
-        </div>
-        <div class="col-xs-6 col-sm-3 placeholder">
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-          <h4>Label</h4>
-          <span class="text-muted">Something else</span>
-        </div>
-        <div class="col-xs-6 col-sm-3 placeholder">
-          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-          <h4>Label</h4>
-          <span class="text-muted">Something else</span>
-        </div>
-      </div>
-
-      <h2 class="sub-header">Section title</h2>
+    <div v-for="th in packages">{{th.label}}<br>
+      <h2 class="sub-header">{{th.label}}</h2>
       <div class="table-responsive">
         <table class="table table-striped">
           <thead>
           <tr>
-            <th>#</th>
-            <th>Header</th>
-            <th>Header</th>
-            <th>Header</th>
-            <th>Header</th>
+            <th>
+              <select class="btn btn-default dropdown-toggle">
+                <option v-for="part in currency" v-model="currency.value1">
+                  {{ part.text }}
+                </option>
+              </select>
+            </th>
+            <th>
+              90
+            </th>
+            <th>
+              <select class="btn btn-default dropdown-toggle">
+                <option v-for="nmb in inv">
+                  {{ nmb.text }}
+                </option>
+              </select>
+            </th>
+            <th>
+              <button class="btn btn-success">BUY</button>
+            </th>
           </tr>
           </thead>
           <tbody>
           <tr>
-            <td>1,001</td>
-            <td>Lorem</td>
-            <td>ipsum</td>
-            <td>dolor</td>
-            <td>sit</td>
-          </tr>
-          <tr>
-            <td>1,002</td>
-            <td>amet</td>
-            <td>consectetur</td>
-            <td>adipiscing</td>
-            <td>elit</td>
-          </tr>
-          <tr>
-            <td>1,003</td>
-            <td>Integer</td>
-            <td>nec</td>
-            <td>odio</td>
-            <td>Praesent</td>
-          </tr>
-          <tr>
-            <td>1,003</td>
-            <td>libero</td>
-            <td>Sed</td>
-            <td>cursus</td>
-            <td>ante</td>
-          </tr>
-          <tr>
-            <td>1,004</td>
-            <td>dapibus</td>
-            <td>diam</td>
-            <td>Sed</td>
-            <td>nisi</td>
-          </tr>
-          <tr>
-            <td>1,005</td>
-            <td>Nulla</td>
-            <td>quis</td>
-            <td>sem</td>
-            <td>at</td>
-          </tr>
-          <tr>
-            <td>1,006</td>
-            <td>nibh</td>
-            <td>elementum</td>
-            <td>imperdiet</td>
-            <td>Duis</td>
-          </tr>
-          <tr>
-            <td>1,007</td>
-            <td>sagittis</td>
-            <td>ipsum</td>
-            <td>Praesent</td>
-            <td>mauris</td>
-          </tr>
-          <tr>
-            <td>1,008</td>
-            <td>Fusce</td>
-            <td>nec</td>
-            <td>tellus</td>
-            <td>sed</td>
-          </tr>
-          <tr>
-            <td>1,009</td>
-            <td>augue</td>
-            <td>semper</td>
-            <td>porta</td>
-            <td>Mauris</td>
-          </tr>
-          <tr>
-            <td>1,010</td>
-            <td>massa</td>
-            <td>Vestibulum</td>
-            <td>lacinia</td>
-            <td>arcu</td>
-          </tr>
-          <tr>
-            <td>1,011</td>
-            <td>eget</td>
-            <td>nulla</td>
-            <td>Class</td>
-            <td>aptent</td>
-          </tr>
-          <tr>
-            <td>1,012</td>
-            <td>taciti</td>
-            <td>sociosqu</td>
-            <td>ad</td>
-            <td>litora</td>
-          </tr>
-          <tr>
-            <td>1,013</td>
-            <td>torquent</td>
-            <td>per</td>
-            <td>conubia</td>
-            <td>nostra</td>
-          </tr>
-          <tr>
-            <td>1,014</td>
-            <td>per</td>
-            <td>inceptos</td>
-            <td>himenaeos</td>
-            <td>Curabitur</td>
-          </tr>
-          <tr>
-            <td>1,015</td>
-            <td>sodales</td>
-            <td>ligula</td>
-            <td>in</td>
-            <td>libero</td>
+            <td>{{th.days}}</td>
+            <td>{{th.commission}}</td>
+            <td>{{th.profit}}</td>
           </tr>
           </tbody>
+          <thead>
+          <th>Period days</th>
+          <th>Commision</th>
+          <th>Profit</th>
+          </thead>
+
+          <tbody>
+          <tr>
+            <td>{{th.days}}</td>
+            <td>{{th.commission}}</td>
+            <td><button class="btn btn-default">Info
+            </button></td>
+          </tr>
+          </tbody>
+          <thead>
+          <th>Percent per month</th>
+          <th>Period Percent</th>
+          </thead>
+
         </table>
+        </div>
       </div>
     </div>
   </div>
@@ -191,74 +74,78 @@
     },
     data() {
       return {
-        currency:{
-          usd:1.23,
-          eur:0.99
-        },
-        client: {
-          name: 'Martin',
-          surname: 'Butts',
-          account: "1EG23456A7",
-          amount: 0,
-          investment: 999,
-          profit: 636,
-          price: 7.50,
-          commission: [10, 12, 15, 16],
-          amountOut: 0,
-          amountIn: 190,
-          amountBlocked:49,
-          accountStatus: 22344,
-          widthdraw: 200,
-          amountInvested: 300,
-          balance: 22144,
-          days: [365, 720, "3 years"]
-        },
-        accountEur: {
-          account: {
-            amountOut: 0,
-            amountIn: 190,
-            amountBlocked:49,
-          },
+        isActive: true,
+        hasError: false,
+        currency: [
+          { value: 1, text: "€", },
+          { value: 2, text: "$", },
+        ],
+        inv: [
+          {value:1, text:90,},
+          {value:1, text:180, },
+          {value:1, text:360},
+          {value:1, text:480},
+          {value:1, text:1500},
+        ],
+
+        packages: {
           yellow: {
-            profit: 3338,
-            commission: [10, 12, 15, 16],
-            days: [365, 720, "3 years"],
-            percentMonth: [12,54,53,22]
+            color: "#1E90FF",
+            label: "Yellow package",
+            currency: "€",
+            profit: 3338 + "%",
+            commission: 10 + "%",
+            days: 365,
+            percentMonth: 12 + "%",
+            val: 30 + "€"
           },
           standard: {
-            profit: 4438,
-            commission: [10, 12, 15, 16],
-            days: [365, 720, "3 years"],
-            percentMonth: [12,54,53,22]
+            label: "Standard package",
+            currency: "$",
+            profit: 4438 + "%",
+            commission: 12 + "%",
+            days: 720,
+            percentMonth: 54 + "%"
           },
           green: {
-            profit: 4238,
-            commission: [10, 12, 15, 16],
-            days: [365, 720, "3 years"],
-            percentMonth: [12,54,53,22]
+            label: "Green package",
+            currency: "€",
+            profit: 4238 + "%",
+            commission: 15 + "%",
+            days: 365,
+            percentMonth: 54 + "%"
           },
           exclusive: {
-            profit: 4338,
-            commission: [10, 12, 15, 16],
-            days: [365, 720, "3 years"],
-            percentMonth: [12,54,53,22]
+            label: "Exlusive package",
+            currency: "$",
+            profit: 4338 + "%",
+            commission: 16 + "%",
+            days: 720,
+            percentMonth: 100 + "%"
           },
           blue: {
-            profit: 5238,
-            commission: [10, 12, 15, 16],
-            days: [365, 720, "3 years"],
-            percentMonth: [12,54,53,22]
+            label: "Blue package",
+            currency: "€",
+            profit: 5238 + "%",
+            commission: 18 + "%",
+            days: "3 years",
+            percentMonth: 110 + "%"
+          },
+          orange: {
+            label: "Orange package",
+            currency: "€",
+            profit: 5238 + "%",
+            commission: 18 + "%",
+            days: "3 years",
+            percentMonth: 120 + "%"
           }
-        }
+        },
       }
     },
     methods:{
-      mrgbtn: function (event) {
-        console.log("hello from console")
-//        if (event) {
-//          alert(event.target.tagName)
-//        }
-      }
+    },
+    calculations: {
+
     }
   }
 </script>
@@ -347,14 +234,6 @@
   .navigation, #main-menu {
     padding: 46px 10px 10px;
     border: 1px solid #7ab35a;
-  }
-  body{
-    background: #21273a;
-    color: #f5f5f5;
-  }
-  .dark {
-    background: #21273a;
-    color: #e6e6e6;
   }
   ol, ul {
     margin-top: 0;

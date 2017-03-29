@@ -1,73 +1,38 @@
 <template>
-
+  <div class="container-fluid">
   <div class="row">
     <div class="packages" v-bind:class = {center:true}>
       <div v-for="acc in accounts">
-        <div class="accountBox">
-          <br>
-          <h1 class="accountHeader">Account current EUR</h1>
-          <br>
+        <h4 class="sub-header">Account current {{acc.currency}}</h4>
+        <div class="table-responsive">
+          <table class="table table-hover">
+
+            <thead>
+            <tr>
+              <th>{{acc.account}}</th>
+              <th>Amount In</th>
+              <th>Amount Out</th>
+              <th>Amount Blocked</th>
+              <th>Amount Invested</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+              <td>{{acc.amount}}</td>
+              <td>{{acc.amountIn}}</td>
+              <td>{{acc.amountOut}}</td>
+              <td>{{acc.amountBlock}}</td>
+              <td>{{acc.amountInv}}</td>
+            </tr>
+            </tbody>
+
+          </table>
         </div>
-          <div class="col-sm-12" >
-            <div class="animate-panel">
-              <div class="panel-body">
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                  <div class="stats-title">
-                    <h4>{{acc.account}}</h4>
-                  </div>
-                  <div class="m-t-xl">
-                    <div class="cell">
-                      <h3 v-if="show">{{acc.amount}}</h3>
-                    </div>
-                    <div class="cell">
-                      <button class="btn btn-success btn-sm mrgbtn" type="button"><span class="glyphicon glyphicon-arrow-right"></span></button>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
-                  <div class="stats-title">
-                    <h5 class="header-panel-right">AMOUNT IN</h5>
-                  </div>
-                  <div class="m-t-xl">
-                    <div class="cell">
-                      <h3>{{acc.amountIn}}</h3>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
-                  <div class="stats-title">
-                    <h5 class="header-panel-right">AMOUNT OUT</h5>
-                  </div>
-                  <div class="m-t-xl">
-                    <div class="cell">
-                      <h3>{{acc.amountOut}}</h3>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
-                  <div class="stats-title">
-                    <h5 class="header-panel-right">AMOUNT BLOCKED</h5>
-                  </div>
-                  <div class="m-t-xl">
-                    <div class="cell">
-                      <h3>{{acc.amountBlock}}</h3>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                  <div class="stats-title">
-                    <h5 class="header-panel-right">AMOUNT INVESTED</h5>
-                  </div>
-                  <div class="m-t-xl">
-                    <div class="cell">
-                      <h3>{{acc.amountInv}}</h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
       </div>
+
+    </div>
+    <hr>
     </div>
     </div>
 
@@ -81,6 +46,7 @@
         show: true,
         accounts: {
           accountEur: {
+            currency: "EUR",
             account:"3AE3443ULLERW",
             amount:399 + "€",
             amountOut:190 + "€",
@@ -89,6 +55,7 @@
             amountIn: 555 + "€"
           },
           accountDol: {
+            currency: "Dollars",
             account:"3AE3443ULLERW",
             amount:"$" + 599,
             amountOut:"$" + 90,

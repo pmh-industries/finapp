@@ -208,17 +208,13 @@
     float: none;
     width: 100%;
   }
-
   .centered {
     text-align:center;
   }
-
-
   #main-menu-inner {
     width: 240px;
     text-decoration: none;
   }
-
   .hpanel .panel-body {
     background: #fff;
     border: 1px solid #e4e5e7;
@@ -241,14 +237,6 @@
   .navigation, #main-menu {
     padding: 46px 10px 10px;
     border: 1px solid #7ab35a;
-  }
-  body{
-    background: #21273a;
-    color: #7ab35a;
-  }
-  .dark {
-    background: #21273a;
-
   }
   ol, ul {
     margin-top: 0;
