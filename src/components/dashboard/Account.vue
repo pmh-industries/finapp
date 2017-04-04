@@ -108,10 +108,6 @@
     margin-right: 10px;
   }
 
-.accountHeader {
-  text-align: center;
-
-}
 #acc {
  font-color:green;
 }
