@@ -1,61 +1,91 @@
 <template lang="html">
-  <div class="container col-xs-12">
-    <div class="row clearfix">
-      <div class="col-md-12 column">
-        <table class="table table-bordered table-hover" id="tab_logic">
-          <thead>
-          <tr >
-            <th class="text-center">
-              #
-            </th>
-            <th class="text-center">
-              Name
-            </th>
-            <th class="text-center">
-              Surname
-            </th>
-            <th class="text-center">
-              Email
-            </th>
-
-            <th class="text-center">
-              Gender
-            </th>
-
-          </tr>
-          </thead>
-          <tbody>
-          <tr id='addr0'>
-            <td>
-              1
-            </td>
-            <td>
-              <input type="text" name='name0'  placeholder='Name' class="form-control"/>
-            </td>
-            <td>
-              <input type="text" name='sur0' placeholder='Surname' class="form-control"/>
-            </td>
-            <td>
-              <input type="text" name='email0' placeholder='Email' class="form-control"/>
-            </td>
-            <td>
-              <select type="text" name="gender0" class="form-control">
-                <option name="male" value="male">Male</option>
-                <option name="Female" value="Female">Female</option>
-                <option name="3rdgen" value="none">None</option>
-              </select>
-            </td>
-          </tr>
-          <tr id='addr1'></tr>
-          </tbody>
-        </table>
-      </div>
-      </div>
+  <div id="root">
+   <button>
+{{test}}
+   </button>
+      {{currency}}
     </div>
 </template>
 
 <script>
-  export default {}
+    import news from './News'
+    export default {
+        data() {
+            el:"#root"
+            return {
+                curDol:'',
+                currency:['22 $','44 eur'],
+                eur:0.99,
+                test:"test",
+                client: {
+                    name: 'Martin',
+                    surname: 'Butts',
+                    account: "1EG23456A7",
+                    amount: 0,
+                    investment: 999,
+                    profit: 636,
+                    price: 7.50,
+                    commission: [10, 12, 15, 16],
+                    amountOut: 0,
+                    amountIn: 190,
+                    amountBlocked:49,
+                    accountStatus: 22344,
+                    widthdraw: 200,
+                    amountInvested: 300,
+                    balance: 22144,
+                    days: [365, 720, "3 years"]
+                },
+                accountEur: {
+                    account: {
+                        amountOut: 0,
+                        amountIn: 190,
+                        amountBlocked:49,
+                    },
+                    yellow: {
+                        profit: 3338,
+                        commission: [10, 12, 15, 16],
+                        days: [365, 720, "3 years"],
+                        percentMonth: [12,54,53,22]
+                    },
+                    standard: {
+                        profit: 4438,
+                        commission: [10, 12, 15, 16],
+                        days: [365, 720, "3 years"],
+                        percentMonth: [12,54,53,22]
+                    },
+                    green: {
+                        profit: 4238,
+                        commission: [10, 12, 15, 16],
+                        days: [365, 720, "3 years"],
+                        percentMonth: [12,54,53,22]
+                    },
+                    exclusive: {
+                        profit: 4338,
+                        commission: [10, 12, 15, 16],
+                        days: [365, 720, "3 years"],
+                        percentMonth: [12,54,53,22]
+                    },
+                    blue: {
+                        profit: 5238,
+                        commission: [10, 12, 15, 16],
+                        days: [365, 720, "3 years"],
+                        percentMonth: [12,54,53,22]
+                    }
+                }
+            }
+        },
+        methods: {
+            clicky: function () {
+                console.log("hello"+ this.currency)
+                this.currency.push(this.eur)
+
+            },
+            add: function (event) {
+                console.log("hello form add")
+
+            }
+        }
+    }
 </script>
 
 <style lang="css">

@@ -30,6 +30,12 @@
                 <li>
                   <router-link to="/accountDash">Account steps</router-link>
                 </li>
+                <li>
+                  <router-link to="/news">News</router-link>
+                </li>
+                <li>
+                  <router-link to="/news">Profile</router-link>
+                </li>
               </ul>
             </div>
         </nav>
@@ -44,12 +50,15 @@
             </p>
           </div>
         </div>
-        <div class="row">
+        <div id="row">
+          <ul>
+            <li v-for="currencies in currency"></li>
+          </ul>
           <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
             <div class="cell">
-              <span>EUR / USD : 1 / {{currency.eur}}</span>
+              <span>EUR / USD : 1 / {{this.eur}}</span>
               <div class="cell">
-                <button v-on:click="mrgbtn" class="btn btn-success btn-sm mrgbtn" type="button">
+                <button v-on:click="clicky" class="btn btn-success btn-sm mrgbtn">
                   <span class="glyphicon glyphicon-arrow-right"></span></button>
               </div>
             </div>
@@ -59,7 +68,7 @@
             <div class="cell">
               <span>USD / EUR : 1 / {{currency.usd}}</span>
               <div class="cell">
-                <button class="btn btn-success btn-sm mrgbtn" type="button">
+                <button v-on:click="add" class="btn btn-success btn-sm mrgbtn" type="button" >
                   <span class="glyphicon glyphicon-arrow-right"></span></button>
               </div>
             </div>
@@ -90,10 +99,10 @@
     },
     data() {
       return {
-        currency:{
-          usd:1.23,
-          eur:0.99
-        },
+        curDol:'',
+        currency:['22 $','44 eur'],
+        eur:0.99,
+        test:"test",
         client: {
           name: 'Martin',
           surname: 'Butts',
@@ -151,12 +160,15 @@
         }
       }
     },
-    methods:{
-      mrgbtn: function (event) {
-  console.log("hello from console")
-//        if (event) {
-//          alert(event.target.tagName)
-//        }
+    methods: {
+      clicky: function () {
+        console.log("hello"+ this.currency)
+        this.currency.push(this.eur)
+
+      },
+      add: function (event) {
+        console.log("hello form add")
+
       }
     }
   }

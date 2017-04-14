@@ -9,7 +9,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">BootZard - Bootstrap Wizard Template</a>
+          <a class="navbar-brand" href="index.html">Wizard</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="top-navbar-1">
@@ -26,6 +26,9 @@
               <hr>
               <li>
                 <router-link to="/packages">Packages</router-link>
+              </li>
+              <li>
+                  <router-link to="/news">News</router-link>
               </li>
             </ul>
         </div>

@@ -1,13 +1,14 @@
 <template>
   <div class="container-fluid">
   <div class="row">
+    <navbar/>
     <div class="packages" v-bind:class = {center:true}>
       <div v-for="acc in accounts">
         <h4 class="sub-header">Account current {{acc.currency}}</h4>
         <div class="table-responsive">
-          <table class="table table-hover">
+          <table class="table table-striped table-inverseç">
 
-            <thead>
+            <thead class="thead-inverse">
             <tr>
               <th>{{acc.account}}</th>
               <th>Amount In</th>

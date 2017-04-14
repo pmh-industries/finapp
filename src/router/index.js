@@ -13,6 +13,7 @@ import Packages from 'components/dashboard/Packages'
 import Login from 'components/layout/Login'
 import AccountDash from 'components/dashboard/AccountDash'
 import Darkdash from 'components/dashboard/Darkdash'
+import News from 'components/dashboard/News'
 
 
 Vue.use(Router);
@@ -74,7 +75,11 @@ export default new Router({
       name: 'Darkdash',
       component: Darkdash
     },
-
+    {
+      path:'/News',
+      name: 'News',
+      component: News
+    }
   ],
   mode: 'history'
 })
