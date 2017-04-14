@@ -15,7 +15,7 @@ import AccountDash from 'components/dashboard/AccountDash'
 import Darkdash from 'components/dashboard/Darkdash'
 import News from 'components/dashboard/News'
 
-
+window._ = require('lodash');
 Vue.use(Router);
 
 export default new Router({
