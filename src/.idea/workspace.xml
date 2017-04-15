@@ -5,7 +5,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/workspace.xml" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/dashboard/News.vue" afterPath="$PROJECT_DIR$/components/dashboard/News.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/router/index.js" afterPath="$PROJECT_DIR$/router/index.js" />
     </list>
     <ignored path="src.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -21,11 +20,12 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="src" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.63471776">
+    <splitter split-orientation="horizontal" split-proportion="0.691048">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="Navbar.vue" pinned="false" current-in-tab="false">
@@ -80,18 +80,16 @@
           <file leaf-file-name="News.vue" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/components/dashboard/News.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="232">
-                  <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+                <state relative-caret-position="316">
+                  <caret line="145" column="38" selection-start-line="145" selection-start-column="38" selection-end-line="145" selection-end-column="38" />
                   <folding>
-                    <element signature="e#698#720#0" expanded="true" />
-                    <element signature="e#770#4873#0" expanded="true" />
-                    <element signature="e#831#4037#0" expanded="true" />
-                    <element signature="e#894#1838#0" expanded="true" />
-                    <element signature="e#921#1358#0" expanded="true" />
-                    <element signature="e#1385#1819#0" expanded="true" />
-                    <element signature="e#1920#2550#0" expanded="true" />
-                    <element signature="e#4066#4631#0" expanded="true" />
-                    <element signature="e#4652#4867#0" expanded="true" />
+                    <element signature="e#1935#1957#0" expanded="true" />
+                    <element signature="e#2068#3403#0" expanded="true" />
+                    <element signature="e#2188#2334#0" expanded="true" />
+                    <element signature="e#2358#3388#0" expanded="true" />
+                    <element signature="e#2385#2865#0" expanded="true" />
+                    <element signature="e#2892#3370#0" expanded="true" />
+                    <element signature="e#4243#4557#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -153,14 +151,12 @@
           <file leaf-file-name="Dashboard.vue" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/components/dashboard/Dashboard.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="510">
-                  <caret line="34" column="11" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
+                <state relative-caret-position="522">
+                  <caret line="164" column="18" selection-start-line="164" selection-start-column="18" selection-end-line="164" selection-end-column="18" />
                   <folding>
                     <element signature="e#2971#3002#0" expanded="true" />
-                    <element signature="e#3057#5035#0" expanded="true" />
                     <element signature="e#3075#3136#0" expanded="true" />
                     <element signature="e#3164#4807#0" expanded="true" />
-                    <element signature="e#4828#5031#0" expanded="true" />
                     <element signature="n#style#0;n#!!top" expanded="false" />
                     <element signature="e#5074#5224#0" expanded="false" />
                     <element signature="e#5234#5292#0" expanded="false" />
@@ -172,7 +168,7 @@
           <file leaf-file-name="Packages.vue" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/components/dashboard/Packages.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1545">
+                <state relative-caret-position="675">
                   <caret line="140" column="10" selection-start-line="89" selection-start-column="8" selection-end-line="140" selection-end-column="10" />
                   <folding>
                     <element signature="e#1743#1774#0" expanded="true" />
@@ -212,10 +208,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1410" />
-    <option name="y" value="-512" />
-    <option name="width" value="1209" />
-    <option name="height" value="973" />
+    <option name="x" value="-1920" />
+    <option name="y" value="-534" />
+    <option name="width" value="958" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -339,6 +335,7 @@
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+    <property name="FullScreen" value="true" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="CucumberRunConfigurationType" factoryName="Cucumber">
@@ -455,15 +452,15 @@
       <workItem from="1491304003458" duration="50000" />
       <workItem from="1491304574487" duration="4385000" />
       <workItem from="1492054694469" duration="9089000" />
-      <workItem from="1492065888931" duration="13332000" />
+      <workItem from="1492065888931" duration="30380000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26958000" />
+    <option name="totallyTimeSpent" value="44006000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1410" y="-512" width="1209" height="973" extended-state="0" />
+    <frame x="-1920" y="-534" width="958" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10969116" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -474,7 +471,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="CSS-X-Fire" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23025048" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20134875" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -570,15 +567,13 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#698#720#0" expanded="true" />
-            <element signature="e#770#4873#0" expanded="true" />
-            <element signature="e#831#4037#0" expanded="true" />
-            <element signature="e#894#1838#0" expanded="true" />
-            <element signature="e#921#1358#0" expanded="true" />
-            <element signature="e#1385#1819#0" expanded="true" />
-            <element signature="e#1920#2550#0" expanded="true" />
-            <element signature="e#4066#4631#0" expanded="true" />
-            <element signature="e#4652#4867#0" expanded="true" />
+            <element signature="e#1935#1957#0" expanded="true" />
+            <element signature="e#2068#3403#0" expanded="true" />
+            <element signature="e#2188#2334#0" expanded="true" />
+            <element signature="e#2358#3388#0" expanded="true" />
+            <element signature="e#2385#2865#0" expanded="true" />
+            <element signature="e#2892#3370#0" expanded="true" />
+            <element signature="e#4243#4557#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -831,7 +826,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/components/dashboard/Packages.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1545">
+        <state relative-caret-position="675">
           <caret line="140" column="10" selection-start-line="89" selection-start-column="8" selection-end-line="140" selection-end-column="10" />
           <folding>
             <element signature="e#1743#1774#0" expanded="true" />
@@ -864,18 +859,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/components/dashboard/News.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+        <state relative-caret-position="316">
+          <caret line="145" column="38" selection-start-line="145" selection-start-column="38" selection-end-line="145" selection-end-column="38" />
           <folding>
-            <element signature="e#698#720#0" expanded="true" />
-            <element signature="e#770#4873#0" expanded="true" />
-            <element signature="e#831#4037#0" expanded="true" />
-            <element signature="e#894#1838#0" expanded="true" />
-            <element signature="e#921#1358#0" expanded="true" />
-            <element signature="e#1385#1819#0" expanded="true" />
-            <element signature="e#1920#2550#0" expanded="true" />
-            <element signature="e#4066#4631#0" expanded="true" />
-            <element signature="e#4652#4867#0" expanded="true" />
+            <element signature="e#1935#1957#0" expanded="true" />
+            <element signature="e#2068#3403#0" expanded="true" />
+            <element signature="e#2188#2334#0" expanded="true" />
+            <element signature="e#2358#3388#0" expanded="true" />
+            <element signature="e#2385#2865#0" expanded="true" />
+            <element signature="e#2892#3370#0" expanded="true" />
+            <element signature="e#4243#4557#0" expanded="true" />
           </folding>
         </state>
       </provider>
