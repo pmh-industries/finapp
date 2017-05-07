@@ -1,11 +1,11 @@
 <template>
-  <div class="container">
+  <div class="home">
     <header class="image-bg-fluid-height">
-      <img class="img-responsive img-center" src="" alt="">
-    </header>
-    <h1 class="center">{{ msg }}</h1>
+    <img class="img-responsive img-center" src="" alt="">
+  </header>
+    <h1>{{ msg }}</h1>
     <hr>
-    <div class="jumbron content center">
+    <div class="jumbotron content">
       <p>Pancetta tail spare ribs sirloin, bresaola shank ribeye tenderloin ham hock sausage chuck doner beef ribs alcatra meatloaf. Cow pork loin strip steak venison tri-tip beef t-bone. Biltong shankle pig tenderloin, kielbasa spare ribs hamburger meatloaf rump ham tri-tip. Jowl meatball fatback sirloin picanha ham, shoulder tenderloin swine sausage pork bresaola jerky cupim. Pork tail jerky beef ribs short ribs. Beef ribs alcatra meatball, ribeye rump turducken andouille. Pork doner sausage, shank tri-tip prosciutto pork loin turkey pork chop pancetta tenderloin flank ribeye.</p>
       <div class="container">
         <div class="row">
@@ -31,7 +31,24 @@
       </div>
     </div>
     <hr>
-    <Map/>
+    <div class="jumbotron content">
+
+      <div class="row">
+        <div class="col-sm-6 col-xs-12">
+          <h2>Contact Details</h2>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+          <iframe
+            width="100%"
+            height="400"
+            frameborder="0" style="border:0"
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBWxpyEqHQtE3NDZO6YK2jomCpTJCXvxek
+              &q=Space+Needle,Seattle+WA" allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+
   </div>
 </template>
 
@@ -39,13 +56,10 @@
 
 
 export default {
-  components: {
-//    'map': Map,
-  },
   name: 'home',
   data () {
     return {
-      msg: "Welcome to Firstinvestment.eu",
+      msg: "Welcome to Finapp. It's going to be awesome",
     }
   },
 }
@@ -81,6 +95,11 @@ li {
 
 a {
   color: #42b983;
+}
+
+#map {
+  height: 400px;
+  width: 100%;
 }
 
 .footer {
@@ -155,10 +174,6 @@ section {
 
 .section-paragraph {
   margin: 30px 0;
-}
-.center {
-text-align: center;
-  margin:10px;
 }
 
 footer {

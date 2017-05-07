@@ -1,5 +1,5 @@
-# finapp 
-http://finapp.surge.sh/
+# finapp
+
 > A Vue.js project
 
 ## Build Setup

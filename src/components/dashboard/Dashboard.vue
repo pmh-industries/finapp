@@ -1,33 +1,23 @@
 <template lang="html">
 
-  <div class="container-fluid dark">
+  <div class="container-fluid">
       <div class="col-sm-3 col-lg-2">
-        <nav class="navbar navbar-inverse navbar-no-bg" role="navigation">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="index.html">Personal account</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="top-navbar-1">
-              <ul class="nav navbar-nav">
-                <li>
-                  <router-link to="/dashboard">Dashboard</router-link>
-                </li>
-                <hr>
-                <li>
-                  <router-link to="/account">Account</router-link>
-                </li>
-                <hr>
-                <li>
-                  <router-link to="/packages">Packages</router-link>
-                </li>
-              </ul>
-            </div>
+        <nav class="navbar navbar- navbar-fixed-side" v-bind:class={gray:true}>
+          <ul class="navigation">
+            <h5>Personal account</h5>
+            <hr>
+            <li>
+              <router-link to="/dashboard">Dashboard</router-link>
+            </li>
+            <hr>
+            <li>
+              <router-link to="/account">Account</router-link>
+            </li>
+            <hr>
+            <li>
+              <router-link to="/packages">Packages</router-link>
+            </li>
+          </ul>
         </nav>
       </div>
 
@@ -38,20 +28,21 @@
             <p>
               The reference rates of European Central Bank. Usually updated around 16:00 CET
             </p>
+
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
             <div class="cell">
               <span>EUR / USD : 1 / {{currency.eur}}</span>
               <div class="cell">
-                <button v-on:click="mrgbtn" class="btn btn-success btn-sm mrgbtn" type="button">
+                <button class="btn btn-success btn-sm mrgbtn" type="button">
                   <span class="glyphicon glyphicon-arrow-right"></span></button>
               </div>
             </div>
           </div>
 
-          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
             <div class="cell">
               <span>USD / EUR : 1 / {{currency.usd}}</span>
               <div class="cell">
@@ -65,7 +56,6 @@
         <accounts/>
 
         <packages/>
-
       </div>
     </div>
   </div>
@@ -147,11 +137,8 @@
       }
     },
     methods:{
-      mrgbtn: function (event) {
-  console.log("hello from console")
-//        if (event) {
-//          alert(event.target.tagName)
-//        }
+      meme: function(name, surname){
+        return name + surname
       }
     }
   }
@@ -208,13 +195,17 @@
     float: none;
     width: 100%;
   }
+
   .centered {
     text-align:center;
   }
+
+
   #main-menu-inner {
     width: 240px;
     text-decoration: none;
   }
+
   .hpanel .panel-body {
     background: #fff;
     border: 1px solid #e4e5e7;
@@ -238,6 +229,7 @@
     padding: 46px 10px 10px;
     border: 1px solid #7ab35a;
   }
+
   ol, ul {
     margin-top: 0;
     margin-bottom: 9px;

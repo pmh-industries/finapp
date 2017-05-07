@@ -1,76 +1,99 @@
-<template lang="html">
-  <div class="container-fluid">
-    <div class="row">
-      <div v-for="th in packages"><h4>{{th.label}}</h4><br>
-        <div class="table-responsive">
-          <table class="table table-striped">
-            <thead>
-            <tr>
-              <th>
-                <select class="btn btn-default dropdown-toggle">
-                  <option v-for="part in currency" v-model="currency.value1">
-                    {{ part.text }}
-                  </option>
-                </select>
-              </th>
-              <th>
-                90
-              </th>
-              <th>
-                <select class="btn btn-default dropdown-toggle">
-                  <option v-for="nmb in inv">
-                    {{ nmb.text }}
-                  </option>
-                </select>
-              </th>
-              <th>
-                <button class="btn btn-success">BUY</button>
-              </th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-              <td>{{th.days}}</td>
-              <td>{{th.commission}}</td>
-              <td>{{th.profit}}</td>
-            </tr>
-            </tbody>
-            <thead>
-            <th>Period days</th>
-            <th>Commision</th>
-            <th>Profit</th>
-            </thead>
+<template>
+<div class="row">
+  <div class="packages" v-bind:class = {center:true}>
 
-            <tbody>
-            <tr>
-              <td>{{th.days}}</td>
-              <td>{{th.commission}}</td>
-              <td><button class="btn btn-default">Info
-              </button></td>
-            </tr>
-            </tbody>
-            <thead>
-            <th>Percent per month</th>
-            <th>Period Percent</th>
-            </thead>
-
-          </table>
-        </div>
-      </div>
+    <div class="page-header centered">
+      <h3 >Available Packages</h3>
     </div>
+
+    <ul>
+      <div class="row">
+      <li class="col-xs-12 col-sm-12 col-md-12 col-lg-6 panel" v-for="th in packages">{{th.label}}<br>
+
+
+          <div class="col-lg-3 col-md-4 col-sm-2 col-xs-2">
+            <select class="btn btn-default dropdown-toggle">
+          <option v-for="part in currency" v-model="currency.value1">
+            {{ part.text }}
+          </option>
+        </select>
+            </div>
+
+          <div class="col-lg-3 col-md-4 col-sm-12 col-xs-2">
+            <h4 class="text">90</h4>
+          </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-12 col-xs-2 ">
+          <select class="btn btn-default dropdown-toggle">
+            <option v-for="nmb in inv">
+              {{ nmb.text }}
+            </option>
+          </select>
+        </div>
+
+          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-2">
+            <button class="btn btn-success">BUY</button>
+          </div>
+
+        <br>
+
+        <div class="stat-row">
+
+          <div class="stat-counters bg-default bg-def no-border-b no-padding text-center">
+
+            <div class="stat-cell col-xs-4 col-md-4 padding-sm no-padding-hr">
+              <span class="text-bg"></span>
+              <h4 class="statheader"><span class="text-bg">{{th.days}}</span></h4><br>
+              <span class="text-xs">Period days</span>
+            </div>
+            <div class="stat-cell col-xs-4 col-md-4 padding-sm no-padding-hr">
+              <span class="text-bg"></span>
+              <h4 class="statheader"><span class="text-bg">{{th.commission}}</span></h4><br>
+              <span class="text-xs">Commision</span>
+            </div>
+            <div class="stat-cell col-xs-4 col-md-4 padding-sm no-padding-hr">
+              <span class="text-bg"></span>
+              <h4 class="statheader"><span class="text-bg">{{th.profit}}</span></h4><br>
+              <span class="text-xs">Profit</span>
+            </div>
+          </div>
+
+
+          <div class="stat-counters bg-default bg-def no-border-b no-padding text-center">
+
+          <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
+            <span class="text-bg"></span>
+            <h4 class="statheader"><span class="text-bg">{{th.percentMonth}}</span></h4><br>
+            <span class="text-xs">Percent per month</span>
+          </div>
+          <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
+            <span class="text-bg"></span>
+            <h4 class="statheader"><span class="text-bg">{{th.profit}}</span></h4><br>
+            <span class="text-xs">Period Percent</span>
+          </div>
+          <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
+            <span class="text-xs"><button class="btn btn-default"><span class="text-xs">Info</span></button></span>
+          </div>
+        </div>
+          </div>
+      </li>
+        </div>
+    </ul>
   </div>
-  </div>
+</div>
 </template>
 
-<script>
-  import Account from './Account'
-  import Packages from './Packages'
 
+
+<script>
   export default {
-    components: {
-      'accounts': Account,
-      'packages':Packages,
-    },
+    pack: "#packages",
+    box: ".col-md-6 package-active",
+    animate: ".animate-panel",
+    panelBody: ".panel-body",
+    accountNumber: ".col-lg-3 col-md-4 col-sm-6 col-xs-12",
+
+
     data() {
       return {
         isActive: true,
@@ -142,14 +165,50 @@
       }
     },
     methods:{
-    },
-    calculations: {
-
     }
   }
 </script>
 
 <style lang="css">
+  .cell {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  h1 {
+    margin-top: 0px;
+    margin-right: 10px;
+  }
+  .center {
+    margin-left:-40px;
+  }
+
+  .panel-body {
+    background: #fff;
+    border: 1px solid #e4e5e7;
+    border-radius: 4px;
+  }
+  .page-header.centered {
+    text-align: center;
+    margin-top:20px;
+  }
+  .stat-cell {
+    border-top: 1px solid #6D6D6D !important;
+
+  }
+
+  h4.statheader {
+    color: #37b34e;
+    font-weight: 300;
+  }
+  h2.statheader {
+    color: #37b34e;
+    font-weight: 300;
+  }
+  .stat-row {
+    display: table-row !important;
+    float: none;
+    width: 100%;
+  }
 
   body {
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -158,90 +217,17 @@
     color: #555;
   }
 
-  .cell {
-    display: table-cell;
-    vertical-align: middle;
-  }
-
-  h1 {
-    margin-top: 0px;
-    margin-right: 10px;
-  }
-
-  .space {
-    margin-top:10px;
-    margin-bottom:10px;
-  }
-
-  .panel-body {
+  .panel {
     background: #fff;
-    border: 1px solid #e4e5e7;
     border-radius: 4px;
-    padding: 6px;
-    padding-left: 20px;
+    display: table;
+    margin-bottom: 22px;
+    overflow: hidden;
     position: relative;
-    padding-right: 20px;
-  }
-
-  .page-header.centered {
-    text-align: center;
-    margin-top:20px;
-  }
-  .stat-cell {
-    border-top: 1px solid #6D6D6D !important;
-  }
-
-  h4.statheader {
-    color:limegreen;
-    font-weight: 100;
-  }
-  .stat-row {
-    display: table-row !important;
-    float: none;
-    width: 100%;
-  }
-
-  .centered {
-    text-align:center;
-  }
-
-
-  #main-menu-inner {
-    width: 240px;
-    text-decoration: none;
-  }
-
-  .hpanel .panel-body {
-    background: #fff;
-    border: 1px solid #e4e5e7;
-    border-radius: 4px;
-    padding: 6px;
-    padding-left: 20px;
-    position: relative;
-    padding-right: 20px;
-  }
-  .mrgbtn {
-    margin-left:5px;
-    margin-top:10px;
+    table-layout: fixed !important;
+    border: 1px solid #c4c6c7;
   }
   h1 {
     font-size: 23px;
-  }
-  ul.navigation {
-    font-size: 15px;
-  }
-  .navigation, #main-menu {
-    padding: 46px 10px 10px;
-    border: 1px solid #7ab35a;
-  }
-  ol, ul {
-    margin-top: 0;
-    margin-bottom: 9px;
-  }
-
-  *, :after, :before {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
   }
 </style>
