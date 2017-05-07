@@ -1,14 +1,13 @@
 <template>
   <div class="container-fluid">
   <div class="row">
-    <navbar/>
     <div class="packages" v-bind:class = {center:true}>
       <div v-for="acc in accounts">
         <h4 class="sub-header">Account current {{acc.currency}}</h4>
         <div class="table-responsive">
-          <table class="table table-striped table-inverseç">
+          <table class="table table-hover">
 
-            <thead class="thead-inverse">
+            <thead>
             <tr>
               <th>{{acc.account}}</th>
               <th>Amount In</th>
@@ -36,7 +35,9 @@
     <hr>
     </div>
     </div>
+
 </template>
+
 <script>
   export default {
     acc: "#acc",
@@ -109,6 +110,10 @@
     margin-right: 10px;
   }
 
+.accountHeader {
+  text-align: center;
+
+}
 #acc {
  font-color:green;
 }
