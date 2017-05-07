@@ -1,65 +1,66 @@
 <template lang="html">
-  <div class="container-fluid">
-    <div class="row">
-      <div v-for="th in packages"><h4>{{th.label}}</h4><br>
-        <div class="table-responsive">
-          <table class="table table-striped">
-            <thead>
-            <tr>
-              <th>
-                <select class="btn btn-default dropdown-toggle">
-                  <option v-for="part in currency" v-model="currency.value1">
-                    {{ part.text }}
-                  </option>
-                </select>
-              </th>
-              <th>
-                90
-              </th>
-              <th>
-                <select class="btn btn-default dropdown-toggle">
-                  <option v-for="nmb in inv">
-                    {{ nmb.text }}
-                  </option>
-                </select>
-              </th>
-              <th>
-                <button class="btn btn-success">BUY</button>
-              </th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-              <td>{{th.days}}</td>
-              <td>{{th.commission}}</td>
-              <td>{{th.profit}}</td>
-            </tr>
-            </tbody>
-            <thead>
-            <th>Period days</th>
-            <th>Commision</th>
-            <th>Profit</th>
-            </thead>
+<div class="container-fluid">
+  <div class="row">
+    <div v-for="th in packages">{{th.label}}<br>
+      <h2 class="sub-header">{{th.label}}</h2>
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th>
+              <select class="btn btn-default dropdown-toggle">
+                <option v-for="part in currency" v-model="currency.value1">
+                  {{ part.text }}
+                </option>
+              </select>
+            </th>
+            <th>
+              90
+            </th>
+            <th>
+              <select class="btn btn-default dropdown-toggle">
+                <option v-for="nmb in inv">
+                  {{ nmb.text }}
+                </option>
+              </select>
+            </th>
+            <th>
+              <button class="btn btn-success">BUY</button>
+            </th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>{{th.days}}</td>
+            <td>{{th.commission}}</td>
+            <td>{{th.profit}}</td>
+          </tr>
+          </tbody>
+          <thead>
+          <th>Period days</th>
+          <th>Commision</th>
+          <th>Profit</th>
+          </thead>
 
-            <tbody>
-            <tr>
-              <td>{{th.days}}</td>
-              <td>{{th.commission}}</td>
-              <td><button class="btn btn-default">Info
-              </button></td>
-            </tr>
-            </tbody>
-            <thead>
-            <th>Percent per month</th>
-            <th>Period Percent</th>
-            </thead>
+          <tbody>
+          <tr>
+            <td>{{th.days}}</td>
+            <td>{{th.commission}}</td>
+            <td><button class="btn btn-default">Info
+            </button></td>
+          </tr>
+          </tbody>
+          <thead>
+          <th>Percent per month</th>
+          <th>Period Percent</th>
+          </thead>
 
-          </table>
+        </table>
         </div>
       </div>
     </div>
   </div>
-  </div>
+</div>
 </template>
 
 <script>

@@ -11,8 +11,11 @@ import Dashboard from 'components/dashboard/Dashboard'
 import Account from 'components/dashboard/Account'
 import Packages from 'components/dashboard/Packages'
 import Login from 'components/layout/Login'
+import AccountDash from 'components/dashboard/AccountDash'
+import Darkdash from 'components/dashboard/Darkdash'
+import News from 'components/dashboard/News'
 
-
+window._ = require('lodash');
 Vue.use(Router);
 
 export default new Router({
@@ -62,6 +65,21 @@ export default new Router({
       name: 'Login',
       component: Login
     },
+    {
+      path: '/AccountDash',
+      name: 'AccountDash',
+      component: AccountDash
+    },
+    {
+      path: '/Darkdash',
+      name: 'Darkdash',
+      component: Darkdash
+    },
+    {
+      path:'/News',
+      name: 'News',
+      component: News
+    }
   ],
   mode: 'history'
 })

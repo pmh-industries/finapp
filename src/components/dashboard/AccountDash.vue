@@ -1,51 +1,63 @@
 <template>
-  <div class="container-fluid">
-  <div class="row">
-    <navbar/>
-    <div class="packages" v-bind:class = {center:true}>
-      <div v-for="acc in accounts">
-        <h4 class="sub-header">Account current {{acc.currency}}</h4>
-        <div class="table-responsive">
-          <table class="table table-striped table-inverseç">
-
-            <thead class="thead-inverse">
-            <tr>
-              <th>{{acc.account}}</th>
-              <th>Amount In</th>
-              <th>Amount Out</th>
-              <th>Amount Blocked</th>
-              <th>Amount Invested</th>
-            </tr>
-            </thead>
-
-            <tbody>
-            <tr>
-              <td>{{acc.amount}}</td>
-              <td>{{acc.amountIn}}</td>
-              <td>{{acc.amountOut}}</td>
-              <td>{{acc.amountBlock}}</td>
-              <td>{{acc.amountInv}}</td>
-            </tr>
-            </tbody>
-
-          </table>
+  <div id="rootwizard">
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <ul>
+            <li><a href="#tab1" data-toggle="tab">First</a></li>
+            <li><a href="#tab2" data-toggle="tab">Second</a></li>
+            <li><a href="#tab3" data-toggle="tab">Third</a></li>
+            <li><a href="#tab4" data-toggle="tab">Forth</a></li>
+            <li><a href="#tab5" data-toggle="tab">Fifth</a></li>
+            <li><a href="#tab6" data-toggle="tab">Sixth</a></li>
+            <li><a href="#tab7" data-toggle="tab">Seventh</a></li>
+          </ul>
         </div>
       </div>
+    </div>
+    <div class="tab-content">
+      <div class="tab-pane" id="tab1">
+        1
+      </div>
+      <div class="tab-pane" id="tab2">
+        2
+      </div>
+      <div class="tab-pane" id="tab3">
+        3
+      </div>
+      <div class="tab-pane" id="tab4">
+        4
+      </div>
+      <div class="tab-pane" id="tab5">
+        5
+      </div>
+      <div class="tab-pane" id="tab6">
+        6
+      </div>
+      <div class="tab-pane" id="tab7">
+        7
+      </div>
+      <ul class="pager wizard">
+        <li class="previous first" style="display:none;"><a href="#">First</a></li>
+        <li class="previous"><a href="#">Previous</a></li>
+        <li class="next last" style="display:none;"><a href="#">Last</a></li>
+        <li class="next"><a href="#">Next</a></li>
+      </ul>
+    </div>
+  </div>
 
-    </div>
-    <hr>
-    </div>
-    </div>
 </template>
+
 <script>
   export default {
-    acc: "#acc",
+    components: {
+
+    },
     data() {
       return {
         show: true,
         accounts: {
           accountEur: {
-            currency: "EUR",
             account:"3AE3443ULLERW",
             amount:399 + "€",
             amountOut:190 + "€",
@@ -54,7 +66,6 @@
             amountIn: 555 + "€"
           },
           accountDol: {
-            currency: "Dollars",
             account:"3AE3443ULLERW",
             amount:"$" + 599,
             amountOut:"$" + 90,
@@ -109,9 +120,13 @@
     margin-right: 10px;
   }
 
-#acc {
- font-color:green;
-}
+  .accountHeader {
+    text-align: center;
+
+  }
+  #acc {
+    font-color:green;
+  }
   body {
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 13px;
@@ -122,7 +137,7 @@
     margin-bottom: 20px;
   }
 
-.panel-body {
+  .panel-body {
     background: #fff;
     border: 1px solid #e4e5e7;
     border-radius: 4px;
@@ -170,9 +185,6 @@
     100% {
       transform: scale(0);
     }
-  }
-  .animate-panel{
-    background: #21273a;
   }
 </style>
 
